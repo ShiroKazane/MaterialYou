@@ -2,8 +2,8 @@
  * @name Material You Colors
  * @author JustAlittleWolf#7032
  * @version 1.1.0
- * @description A Material You color implementation for Discord
- * @source https://github.com/JustAlittleWolf/Material-You-Discord-Theme
+ * @description A Material You color implementation for Discord, modified by shirokzn
+ * @source https://github.com/ShiroKazane/Material-You-Discord-Theme
 */
 
 /* Variables */
@@ -14,68 +14,133 @@
      * selecting a color, then copying the "H" value and pasting it in below.
      * range: 0.0-360.0
      */
-    --myc-background-hue: 19;
+    --shr-background-hue: 19;
 
     /* suggested range: 0.5-10.0 */
-    --myc-background-saturation: 1.0;
+    --shr-background-saturation: 1.0;
 
     /* suggested range: 0.8-2.5 */
-    --myc-background-lightness: 1.0;
+    --shr-background-lightness: 1.0;
 
     /* suggested range: 0.5-2.0 */
-    --myc-link-lightness: 1.5;
+    --shr-link-lightness: 1.5;
 
     /* suggested range: 0.7-1.2 */
-    --myc-ui-lightness: 1.0;
+    --shr-ui-lightness: 1.0;
+
+    /*
+     * other things
+     */
+
+    /* font, change to 'gg sans' for default discord font*/
+	--shr-font: 'figtree';
+
+    /* top left corner text */
+	--shr-corner-text: 'Midnight';
+
+	/* thickness of messages divider */
+	--shr-divider-thickness: 3px;
+
+	/* color of status indicators and window controls */
+	--shr-online-indicator: var(--accent-2); /* change to #23a55a for default green */
+	--shr-dnd-indicator: hsl(340, 60%, 60%); /* change to #f23f43 for default red */
+	--shr-idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
+	--shr-streaming-indicator: hsl(260, 60%, 60%); /* change to #593695 for default purple */
+
+    /* amount of spacing and padding */
+	--shr-spacing: 12px;
+
+	/* animations */
+	/* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
+	--shr-list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
+	--shr-unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+	--shr-moon-spin-transition: 0.4s ease; /* moon icon spin */
+	--shr-icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
+
+	/* corner roundness (border-radius) */
+	--shr-roundness-xl: 22px; /* roundness of big panel outer corners */
+	--shr-roundness-l: 20px; /* popout panels */
+	--shr-roundness-m: 16px; /* smaller panels, images, embeds */
+	--shr-roundness-s: 12px; /* members, settings inputs */
+	--shr-roundness-xs: 10px; /* channels, buttons */
+	--shr-roundness-xxs: 8px; /* searchbar, small elements */
+
+	/* direct messages moon icon */
+	/* change to block to show, none to hide */
+	--shr-discord-icon: none; /* discord icon */
+	--shr-moon-icon: block; /* moon icon */
+	--shr-moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
+	--shr-moon-icon-size: auto;
+
+	/* filter uncolorable elements to fit theme */
+	/* (just set to none, they're too much work to configure) */
+	--shr-login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
+	--shr-green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
+	--shr-blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+
+	/* choose style for window control buttons (minimize-maximize-close) */
+	/* block to show, none to hide; choose only one to show!*/
+	--shr-windows-nav: none; /* default windows-style buttons */
+	--shr-custom-nav: block; /* custom mac-style buttons */
 }
 
+:root {
+	--font-primary: var(--shr-font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-display: var(--shr-font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
+:root.reduce-motion {
+	--shr-list-item-transition: none;
+	--shr-unread-bar-transition: none;
+	--shr-moon-spin-transition: none;
+	--shr-icon-spin-transition: none;
+}
 
 :root,
 .default-colors,
 .profileColors-3Y0XaR {
     /* changes all of the main colors of the discord client */
-    --primary-100-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 5.9% * var(--myc-background-saturation)), 100%) min(calc(96.7% * var(--myc-background-lightness)), 100%) !important;
-    --primary-130-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 9.1% * var(--myc-background-saturation)), 100%) min(calc(95.7% * var(--myc-background-lightness)), 100%) !important;
-    --primary-160-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 9.7% * var(--myc-background-saturation)), 100%) min(calc(93.9% * var(--myc-background-lightness)), 100%) !important;
-    --primary-200-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 10% * var(--myc-background-saturation)), 100%) min(calc(92.2% * var(--myc-background-lightness)), 100%) !important;
-    --primary-230-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 8.8% * var(--myc-background-saturation)), 100%) min(calc(88.8% * var(--myc-background-lightness)), 100%) !important;
-    --primary-260-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 7.7% * var(--myc-background-saturation)), 100%) min(calc(84.7% * var(--myc-background-lightness)), 100%) !important;
-    --primary-300-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 6.7% * var(--myc-background-saturation)), 100%) min(calc(79.4% * var(--myc-background-lightness)), 100%) !important;
-    --primary-330-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 5.2% * var(--myc-background-saturation)), 100%) min(calc(73.5% * var(--myc-background-lightness)), 100%) !important;
-    --primary-345-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 6% * var(--myc-background-saturation)), 100%) min(calc(67.5% * var(--myc-background-lightness)), 100%) !important;
-    --primary-360-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 5.1% * var(--myc-background-saturation)), 100%) min(calc(61.6% * var(--myc-background-lightness)), 100%) !important;
-    --primary-400-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 5.5% * var(--myc-background-saturation)), 100%) min(calc(53.5% * var(--myc-background-lightness)), 100%) !important;
-    --primary-430-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 4.8% * var(--myc-background-saturation)), 100%) min(calc(44.9% * var(--myc-background-lightness)), 100%) !important;
-    --primary-460-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 5.2% * var(--myc-background-saturation)), 100%) min(calc(38% * var(--myc-background-lightness)), 100%) !important;
-    --primary-500-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 6% * var(--myc-background-saturation)), 100%) min(calc(32.5% * var(--myc-background-lightness)), 100%) !important;
-    --primary-530-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 6.5% * var(--myc-background-saturation)), 100%) min(calc(27.3% * var(--myc-background-lightness)), 100%) !important;
-    --primary-560-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 6.7% * var(--myc-background-saturation)), 100%) min(calc(23.5% * var(--myc-background-lightness)), 100%) !important;
-    --primary-600-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 6.7% * var(--myc-background-saturation)), 100%) min(calc(20.6% * var(--myc-background-lightness)), 100%) !important;
-    --primary-630-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 6.5% * var(--myc-background-saturation)), 100%) min(calc(18% * var(--myc-background-lightness)), 100%) !important;
-    --primary-645-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 7% * var(--myc-background-saturation)), 100%) min(calc(16.9% * var(--myc-background-lightness)), 100%) !important;
-    --primary-660-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 6.7% * var(--myc-background-saturation)), 100%) min(calc(14.7% * var(--myc-background-lightness)), 100%) !important;
-    --primary-700-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 6.3% * var(--myc-background-saturation)), 100%) min(calc(12.5% * var(--myc-background-lightness)), 100%) !important;
-    --primary-730-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 7.1% * var(--myc-background-saturation)), 100%) min(calc(11% * var(--myc-background-lightness)), 100%) !important;
-    --primary-760-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 6.4% * var(--myc-background-saturation)), 100%) min(calc(9.2% * var(--myc-background-lightness)), 100%) !important;
-    --primary-800-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 8.1% * var(--myc-background-saturation)), 100%) min(calc(7.3% * var(--myc-background-lightness)), 100%) !important;
-    --primary-830-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 4% * var(--myc-background-saturation)), 100%) min(calc(4.9% * var(--myc-background-lightness)), 100%) !important;
-    --primary-860-hsl: var(--myc-background-hue) min(calc(var(--saturation-factor, 1) * 7.7% * var(--myc-background-saturation)), 100%) min(calc(2.5% * var(--myc-background-lightness)), 100%) !important;
+    --primary-100-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 5.9% * var(--shr-background-saturation)), 100%) min(calc(96.7% * var(--shr-background-lightness)), 100%) !important;
+    --primary-130-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 9.1% * var(--shr-background-saturation)), 100%) min(calc(95.7% * var(--shr-background-lightness)), 100%) !important;
+    --primary-160-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 9.7% * var(--shr-background-saturation)), 100%) min(calc(93.9% * var(--shr-background-lightness)), 100%) !important;
+    --primary-200-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 10% * var(--shr-background-saturation)), 100%) min(calc(92.2% * var(--shr-background-lightness)), 100%) !important;
+    --primary-230-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 8.8% * var(--shr-background-saturation)), 100%) min(calc(88.8% * var(--shr-background-lightness)), 100%) !important;
+    --primary-260-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 7.7% * var(--shr-background-saturation)), 100%) min(calc(84.7% * var(--shr-background-lightness)), 100%) !important;
+    --primary-300-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 6.7% * var(--shr-background-saturation)), 100%) min(calc(79.4% * var(--shr-background-lightness)), 100%) !important;
+    --primary-330-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 5.2% * var(--shr-background-saturation)), 100%) min(calc(73.5% * var(--shr-background-lightness)), 100%) !important;
+    --primary-345-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 6% * var(--shr-background-saturation)), 100%) min(calc(67.5% * var(--shr-background-lightness)), 100%) !important;
+    --primary-360-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 5.1% * var(--shr-background-saturation)), 100%) min(calc(61.6% * var(--shr-background-lightness)), 100%) !important;
+    --primary-400-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 5.5% * var(--shr-background-saturation)), 100%) min(calc(53.5% * var(--shr-background-lightness)), 100%) !important;
+    --primary-430-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 4.8% * var(--shr-background-saturation)), 100%) min(calc(44.9% * var(--shr-background-lightness)), 100%) !important;
+    --primary-460-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 5.2% * var(--shr-background-saturation)), 100%) min(calc(38% * var(--shr-background-lightness)), 100%) !important;
+    --primary-500-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 6% * var(--shr-background-saturation)), 100%) min(calc(32.5% * var(--shr-background-lightness)), 100%) !important;
+    --primary-530-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 6.5% * var(--shr-background-saturation)), 100%) min(calc(27.3% * var(--shr-background-lightness)), 100%) !important;
+    --primary-560-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 6.7% * var(--shr-background-saturation)), 100%) min(calc(23.5% * var(--shr-background-lightness)), 100%) !important;
+    --primary-600-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 6.7% * var(--shr-background-saturation)), 100%) min(calc(20.6% * var(--shr-background-lightness)), 100%) !important;
+    --primary-630-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 6.5% * var(--shr-background-saturation)), 100%) min(calc(18% * var(--shr-background-lightness)), 100%) !important;
+    --primary-645-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 7% * var(--shr-background-saturation)), 100%) min(calc(16.9% * var(--shr-background-lightness)), 100%) !important;
+    --primary-660-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 6.7% * var(--shr-background-saturation)), 100%) min(calc(14.7% * var(--shr-background-lightness)), 100%) !important;
+    --primary-700-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 6.3% * var(--shr-background-saturation)), 100%) min(calc(12.5% * var(--shr-background-lightness)), 100%) !important;
+    --primary-730-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 7.1% * var(--shr-background-saturation)), 100%) min(calc(11% * var(--shr-background-lightness)), 100%) !important;
+    --primary-760-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 6.4% * var(--shr-background-saturation)), 100%) min(calc(9.2% * var(--shr-background-lightness)), 100%) !important;
+    --primary-800-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 8.1% * var(--shr-background-saturation)), 100%) min(calc(7.3% * var(--shr-background-lightness)), 100%) !important;
+    --primary-830-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 4% * var(--shr-background-saturation)), 100%) min(calc(4.9% * var(--shr-background-lightness)), 100%) !important;
+    --primary-860-hsl: var(--shr-background-hue) min(calc(var(--saturation-factor, 1) * 7.7% * var(--shr-background-saturation)), 100%) min(calc(2.5% * var(--shr-background-lightness)), 100%) !important;
 
     /*
      * Changes the color of the discord logo and some buttons
      * DELETE THIS if you want to keep the discord-blue logo
      */
-    --brand-260-hsl: var(--myc-background-hue) calc(var(--saturation-factor, 1) * 86.2%*calc(1 / calc(var(--myc-ui-lightness) + 0.5))) min(calc(88.6% * var(--myc-ui-lightness)), 98.6%) !important;
-    --brand-360-hsl: var(--myc-background-hue) calc(var(--saturation-factor, 1) * 86.1%*calc(1 / calc(var(--myc-ui-lightness) + 0.5))) min(calc(77.5% * var(--myc-ui-lightness)), 87.5%) !important;
-    --brand-500-hsl: var(--myc-background-hue) calc(var(--saturation-factor, 1) * 85.6%*calc(1 / calc(var(--myc-ui-lightness) + 0.5))) min(calc(64.7% * var(--myc-ui-lightness)), 74.7%) !important;
-    --brand-560-hsl: var(--myc-background-hue) calc(var(--saturation-factor, 1) * 51.4%*calc(1 / calc(var(--myc-ui-lightness) + 0.5))) min(calc(52.4% * var(--myc-ui-lightness)), 42.4%) !important;
-    --brand-600-hsl: var(--myc-background-hue) calc(var(--saturation-factor, 1) * 46.7%*calc(1 / calc(var(--myc-ui-lightness) + 0.5))) min(calc(44.1% * var(--myc-ui-lightness)), 34.1%) !important;
+    --brand-260-hsl: var(--shr-background-hue) calc(var(--saturation-factor, 1) * 86.2%*calc(1 / calc(var(--shr-ui-lightness) + 0.5))) min(calc(88.6% * var(--shr-ui-lightness)), 98.6%) !important;
+    --brand-360-hsl: var(--shr-background-hue) calc(var(--saturation-factor, 1) * 86.1%*calc(1 / calc(var(--shr-ui-lightness) + 0.5))) min(calc(77.5% * var(--shr-ui-lightness)), 87.5%) !important;
+    --brand-500-hsl: var(--shr-background-hue) calc(var(--saturation-factor, 1) * 85.6%*calc(1 / calc(var(--shr-ui-lightness) + 0.5))) min(calc(64.7% * var(--shr-ui-lightness)), 74.7%) !important;
+    --brand-560-hsl: var(--shr-background-hue) calc(var(--saturation-factor, 1) * 51.4%*calc(1 / calc(var(--shr-ui-lightness) + 0.5))) min(calc(52.4% * var(--shr-ui-lightness)), 42.4%) !important;
+    --brand-600-hsl: var(--shr-background-hue) calc(var(--saturation-factor, 1) * 46.7%*calc(1 / calc(var(--shr-ui-lightness) + 0.5))) min(calc(44.1% * var(--shr-ui-lightness)), 34.1%) !important;
 
     /* changes the color of clickable links */
-    --blue-330-hsl: var(--myc-background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--myc-link-lightness) + 0.5))) min(calc(59% * var(--myc-link-lightness)), 99%) !important;
-    --blue-345-hsl: var(--myc-background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--myc-link-lightness) + 0.5))) min(calc(49.4% * var(--myc-link-lightness)), 89.4%) !important;
-    --blue-430-hsl: var(--myc-background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--myc-link-lightness) + 0.5))) min(calc(45.3% * var(--myc-link-lightness)), 85.3%) !important;
+    --blue-330-hsl: var(--shr-background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--shr-link-lightness) + 0.5))) min(calc(59% * var(--shr-link-lightness)), 99%) !important;
+    --blue-345-hsl: var(--shr-background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--shr-link-lightness) + 0.5))) min(calc(49.4% * var(--shr-link-lightness)), 89.4%) !important;
+    --blue-430-hsl: var(--shr-background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--shr-link-lightness) + 0.5))) min(calc(45.3% * var(--shr-link-lightness)), 85.3%) !important;
 }
 
 .theme-dark .container__03ec9,
@@ -91,5 +156,292 @@
 
 *::selection {
     /* Changes the color when selecting text */
-    background-color: hsl(var(--myc-background-hue) calc(var(--saturation-factor, 1) * 51.4% * calc(1 / calc(var(--myc-ui-lightness) + 0.5))) min(calc(52.4% * var(--myc-ui-lightness)), 42.4%) / 1) !important;
+    background-color: hsl(var(--shr-background-hue) calc(var(--saturation-factor, 1) * 51.4% * calc(1 / calc(var(--shr-ui-lightness) + 0.5))) min(calc(52.4% * var(--shr-ui-lightness)), 42.4%) / 1) !important;
+}
+
+/* change online indicator color */
+rect[fill='#23a55a'],
+svg[fill='#23a55a'] {
+	fill: var(--shr-online-indicator) !important;
+}
+.status_c7d26b[style='background-color: rgb(35, 165, 90);'] {
+	background-color: var(--shr-online-indicator) !important;
+}
+rect[fill='#f0b232'],
+svg[fill='#f0b232'] {
+	fill: var(--shr-idle-indicator);
+}
+.status_c7d26b[style='background-color: rgb(240, 178, 50);'] {
+	background-color: var(--shr-idle-indicator) !important;
+}
+rect[fill='#f23f43'],
+svg[fill='#f23f43'] {
+	fill: var(--shr-dnd-indicator);
+}
+.status_c7d26b[style='background-color: rgb(242, 63, 67);'] {
+	background-color: var(--shr-dnd-indicator) !important;
+}
+rect[fill='#593695'],
+svg[fill='#593695'] {
+	fill: var(--shr-streaming-indicator);
+}
+.status_c7d26b[style='background-color: rgb(89, 54, 149);'] {
+	background-color: var(--shr-streaming-indicator) !important;
+}
+
+/* color fix filters */
+.container_aef5fd:last-child .icon_aef5fd /* explore discoverable servers icon color */ {
+	background-color: #3ba55c;
+	filter: var(--shr-green-to-accent-3-filter);
+}
+.container_aef5fd:first-child .icon_aef5fd /* explore discoverable servers icon color */ {
+	filter: var(--shr-blurple-to-accent-3-filter);
+}
+.artwork_bdd070 /* filter login image */ {
+	filter: var(--shr-login-bg-filter);
+}
+
+/* fix weird message bar padding */
+.clipContainer_b11c5e {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+/* separate header bar */
+.title_a7d72e.themed_fc4f04 /* remove bg */ {
+	background: none;
+}
+.searchResultsWrap_c2b47d /* allow overflow */ {
+	overflow: visible;
+}
+.chatContent_a7d72e::before /* main chat */,
+.membersWrap_cbd271::before /* member list */,
+.searchResultsWrap_c2b47d::before /* search results */,
+.outer_c69a7b.panel_c69a7b::before /* dm profile */,
+.container_a6d69a::before /* forums */ {
+	content: '';
+	position: absolute;
+	margin-top: -48px;
+	background: var(--background-primary);
+	width: 100%;
+	height: 48px;
+	border-radius: var(--shr-roundness-xl) var(--shr-roundness-xl) 0 0;
+}
+.wrapper_d880dc.minimum_d880dc ~ .content_a7d72e .container__93316::before /* remove when in private call */ {
+	display: none;
+}
+.membersWrap_cbd271 /* fix members list height when not scroll */ {
+	height: 100%;
+}
+
+/* rearrange toolbar */
+a[href="https://support.discord.com"] /* hide help */
+{
+	display: none;
+}
+.search_ff5f90 {
+	order: 1;
+	margin: 0 4px 0 12px;
+}
+.chat_a7d72e:has(.searchResultsWrap_c2b47d) .searchBar_a46bef {
+	width: 394px !important;
+	margin-left: calc(var(--shr-spacing) + 8px);
+}
+.chat_a7d72e:has(.outer_c69a7b) .searchBar_a46bef {
+	width: 316px !important;
+	margin-left: calc(var(--shr-spacing) + 8px);
+}
+.chat_a7d72e:has(.membersWrap_cbd271) .searchBar_a46bef {
+	width: 216px !important;
+	margin-left: calc(var(--shr-spacing) + 8px);
+}
+
+/* add spacing */
+.base_a4d4d9 /* outside edges */ {
+	margin: 0 var(--shr-spacing) var(--shr-spacing) 0;
+}
+.sidebar_a4d4d9 /* channel list and user panel */,
+.content_a7d72e /* between chat and member list */ {
+	gap: var(--shr-spacing);
+}
+.sidebar_a4d4d9 /* channel list and chat */ {
+	margin-right: var(--shr-spacing);
+}
+.sidebar_a4d4d9.hidden_a4d4d9 {
+	margin-right: 0;
+}
+.resizeHandle_d1c246 /* pretend to be a margin */ {
+	width: var(--shr-spacing);
+}
+.wrapper_d880dc.fullScreen_d880dc .callContainer_d880dc,
+.fullScreen_d880dc + .layerContainer_cd0de5 + .layerContainer_cd0de5 .container_d1c246 /* fullscreen vc */ {
+	margin-top: var(--shr-spacing);
+}
+.notice_be03aa /* banner notice */,
+.wrapper_d880dc.minimum_d880dc /* private call */ {
+	margin-bottom: var(--shr-spacing);
+}
+/* fix padding */
+#vc-spotify-player /* vencord spotify */,
+.container_adcaac /* vc panel */,
+.panel_bf1a22 /* stream panel */ {
+	padding: 10px;
+}
+
+/* add rounded corners */
+.container_ee69e0 /* channel list */,
+.panels_a4d4d9 /* user panels */,
+.privateChannels_f0963d /* dms list */,
+.container_c2739c /* friends page */,
+.applicationStore_cecc86 /* nitro page */,
+#app-mount .container_f3abf4 /* message requests */,
+.shop_e77fa3 /* discord shop */,
+.container_d1c246 /* message request */,
+#app-mount .callContainer_d880dc /* vc */,
+.chat_a7d72e /* general chat container (for browse channels page */,
+.animatedContainer_fd6364 /* server image card */,
+.notice_be03aa /* banner notice */,
+.wrapper_d880dc.minimum_d880dc, /* private call */
+.wrapper_d880dc.minimum_d880dc ~ .content_a7d72e /* chat under private call */,
+.main_d8215a /* server onboarding */,
+/* discover page sidebar & wrappers */
+.sidebarContainer_a3a4ce,
+.pageWrapper_a3a4ce,
+.thin_c49869.scrollerBase_c49869,
+.layerContainer_cd0de5 .outer_c69a7b /* profile popout */ {
+	border-radius: var(--shr-roundness-xl);
+	overflow: hidden;
+}
+.container_d576e9 /* family center */ {
+	overflow: hidden;
+}
+.sidebar_a4d4d9 /* fix */ {
+	border-radius: 0 !important;
+}
+.container__93316 /* main chat */,
+.chatContent_a7d72e /* main chat inner */,
+.container_cbd271 /* members list */,
+.searchResultsWrap_c2b47d /* search results */,
+.container_a6d69a /* forums */,
+.outer_c69a7b.panel_c69a7b /* dm profile */ {
+	border-radius: 0 0 var(--shr-roundness-xl) var(--shr-roundness-xl);
+}
+
+/* more rounded corners */
+.messagesPopoutWrap_ac90a2 /* inbox, pinned messages popout */,
+.container_e664f3 /* thread popout */,
+.menu_d90b3d .item_d90b3dd /* server option popout */,
+.userPopoutOuter_c69a7b /* user profile popout */,
+.root_b9fccc /* user profile modal */,
+.contentWrapper_af5dbb /* emoji, sticker, gif pickers */,
+.footer_f9a4c9 /* edit modal footer */,
+.layerContainer_cd0de5 .root_f9a4c9 /* upload modal */,
+.uploadModal_f82cc7 .footer_f82cc7 /* upload modal footer */,
+.layerContainer_cd0de5 .inner_c69a7b {
+	border-radius: var(--shr-roundness-l);
+}
+
+.roundedBanner_c3e427 /* user profile popout top */,
+.banner_ab876d /* user profile top when edit */ {
+	border-radius: calc(var(--shr-roundness-l) - 4px) calc(var(--shr-roundness-l) - 4px) 0 0;
+}
+.userPopoutInner_c69a7b:before /* user profile popout bottom */,
+.userProfileModalInner_c69a7b:before /* user profile modal bottom */ {
+	border-radius: calc(var(--shr-roundness-l) - 4px);
+}
+.menu_d90b3d /* general popouts */,
+.embed_b0068a/* embeds */,
+.mediaAttachmentsContainer__242e2 /* image container */,
+.oneByOneGridSingle_cda674 /* image container single */,
+.imageContainer_cf58b5 .imageWrapper__178ee /* gif wrapper */,
+.markup_f8f345 code /* code block */,
+.itemCard_f02fcf /* friend activity */,
+.peopleListItem_d51464:hover /* online list friends */,
+.withTagAsButton_b2ca13:hover, .withTagless_b2ca13:hover /* user panel username */,
+.messageGroupWrapper_ac90a2 /* pinned messages */,
+.accountProfileCard_b69b77 /* my account settings profile background */,
+.userProfileModalInner_c69a7b /* fully focused user profile inner */,
+.mainCard_a6d69a /* form posts & search box */,
+.container_ddbb27 /* guidelines box */ {
+	border-radius: var(--shr-roundness-m);
+}
+.scrollableContainer_d0696b /* message bar */,
+.channelTextArea_a7d72e /* message bar underneath */,
+.select_f6639d /* bot dropdown select */,
+.layout_e9f61e /* members */,
+.interactive_f5eb4b /* dms */,
+.container_c15230 /* thread link */,
+.input_f8bc55 /* settings inputs */,
+.item_eb92a8 /* settings radiobutton bars */,
+.item_eb92a8 .radioBar_eb92a8 /* settings radiobutton bars */,
+.input_f4e139 /* big 'find conversation' search bar */ {
+	border-radius: var(--shr-roundness-s);
+}
+.select_f6639d.open_f6639d /* vencord plugin show all */,
+.headerWithMatchingPosts_a6d69a /* forums searchbar footer */ {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.popout_f6639d /* vencord plugin show all */ {
+	border-radius: 0 0 var(--shr-roundness-s) var(--shr-roundness-s);
+}
+.banner_d29eee /* community server tutorial thing on message bar */ {
+	border-radius: var(--shr-roundness-s) var(--shr-roundness-s) 0 0;
+}
+.scrollableContainer_d0696b.hasConnectedBar_d0696b /* fix message bar with reply bar */ {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+.replyBar_b11c5e {
+	border-radius: var(--shr-roundness-s) var(--shr-roundness-s) 0 0;
+}
+.link_d8bfb3 /* channels */,
+.content_cdc675 /* member connected to vc */,
+.side_a0 .item_a0 /* settings tabs */,
+button.button_dd4f85 /* small buttons */,
+.container__33507 /* friend searchbar */,
+.container_effbe2 /* sticker/emoji picker searchbar */,
+.searchBar_b56bbc /* gif picker searchbar */ ,
+.item_d90b3d /* general popout buttons */,
+.icon_c07d45 /* streaming icon */,
+#vc-spotify-album-image,
+.background_ae3c77 /* settings nitro tab selected */,
+.hoverButtonGroup_e5c1dc /* video download button */,
+.wrapper_ef319f /* message hover menu */,
+.previewChannelRowContent_c5d9bc {
+	border-radius: var(--shr-roundness-xs);
+}
+.hoverButtonGroup_e5c1dc /* reposition video download button */ {
+	top: 6px;
+	right: 6px;
+}
+.wrapper_a7c28c /* mentions */,
+.searchBar_a46bef /* channel search bar */,
+.searchBar_f0963d .searchBarComponent_f0963d /* small 'find conversation' search bar */,
+.topPill_a0 .item_a0 /* friend online/categories */ {
+	border-radius: var(--roundness-xxs);
+}
+#app-mount .centerButton_ef18ee /* fix vc buttons */ {
+	border-radius: 50%;
+}
+
+/* fix view server as role popup */
+.viewAsRolesWarning_adcaac {
+	position: fixed;
+	left: 102px;
+}
+
+/* separate guilds panel background */
+.guilds_a4d4d9 {
+	border-radius: var(--shr-roundness-xl);
+	margin: 0 0 var(--shr-spacing) var(--shr-spacing);
+}
+.guilds_a4d4d9.hidden_fea3ef {
+	margin: 0;
+}
+#app-mount .scroller_fea3ef {
+	padding: 12px 0;
+}
+.base_a4d4d9 {
+	margin-left: var(--shr-spacing);
 }
