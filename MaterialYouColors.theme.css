@@ -574,6 +574,7 @@ button.button_dd4f85 /* small buttons */,
 	position: absolute;
 	width: 65%;
 	height: 65%;
+    background: var(--brand-500-hsl)
 	-webkit-mask-image: var(--shr-moon-icon-url);
 	-webkit-mask-size: var(--shr-moon-icon-size);
 	-webkit-mask-repeat: none;
