@@ -14,7 +14,7 @@
      * selecting a color, then copying the "H" value and pasting it in below.
      * range: 0.0-360.0
      */
-    --myc-background-hue: 0;
+    --myc-background-hue: 19;
 
     /* suggested range: 0.5-10.0 */
     --myc-background-saturation: 1.0;
