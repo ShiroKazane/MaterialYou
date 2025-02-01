@@ -600,7 +600,7 @@ button.button__201d5 /* small buttons */,
     line-height: 16px;
     font-size: 13px;
     font-weight: 900;
-    color: var(--primary-500);
+    color: var(--text-link);
     transform: scaleX(1.2);
     margin-left: 6px;
 }
@@ -681,7 +681,7 @@ button.button__201d5 /* small buttons */,
 }
 .wrapper__6e9f8:hover > .childWrapper__6e9f8::before,
 .wrapper__6e9f8.selected__6e9f8 > .childWrapper__6e9f8::before {
-    background: var(--text-0);
+    background: var(--primary-500);
     transform: rotate(-360deg) scale(0.8);
 }
 .lowerBadge_cc5dd2::before {
