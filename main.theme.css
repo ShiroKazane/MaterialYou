@@ -868,34 +868,6 @@ button.button__67645 /* make user panel buttons round */ {
     border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
-[class^=tipTitle] {
-    text-transform: none;
-    font-size: 0px;
-}
-
-[class^=tipTitle]::after {
-    content: "Vennie.";
-    font-size: 16px;
-}
-
-[class^="ready"] {
-    display: none;
-}
-
-[class^=container] > .content_a2f514::before {
-    visibility: visible;
-    content: '';
-    display: block;
-    background: url("https://shirokazane.github.io/Material-You-Discord-Theme/assets/vennie.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 128px;
-    height: 128px;
-    margin: auto;
-    margin-bottom: 48px;
-}
-
 [aria-label="Mute"] [aria-hidden="true"], [aria-label="Deafen"] [aria-hidden="true"]{
     opacity: 0.4;
 }
