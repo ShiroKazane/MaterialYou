@@ -62,7 +62,7 @@
     --roundness-xs: 10px; /* channels, buttons */
     --roundness-xxs: 8px; /* searchbar, small elements */
 
-    --banner-roundness: 22px 22px 0; /* server banner corner, 0 for bottom */
+    --banner-roundness: 22px 22px 0 0; /* server banner corner, 0 for bottom */
 
     /* direct messages moon icon */
     /* change to block to show, none to hide */
