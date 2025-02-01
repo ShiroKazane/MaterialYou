@@ -249,6 +249,14 @@ svg[fill='#593695'] {
     margin-top: 0;
 }
 
+/* separate header bar */
+.title_f75fb0.themed__9293f /* remove bg */ {
+	background: none;
+}
+.searchResultsWrap_a9e706 /* allow overflow */ {
+	overflow: visible;
+}
+
 .chatContent_f75fb0::before /* main chat */,
 .membersWrap_c8ffbb::before /* member list */,
 .searchResultsWrap_a9e706::before /* search results */,
