@@ -62,6 +62,8 @@
     --roundness-xs: 10px; /* channels, buttons */
     --roundness-xxs: 8px; /* searchbar, small elements */
 
+    --banner-roundness: 22px 22px 0; /* server banner corner, 0 for bottom */
+
     /* direct messages moon icon */
     /* change to block to show, none to hide */
     --discord-icon: none; /* discord icon */
@@ -353,7 +355,6 @@ a[href="https://support.discord.com"] {
 .container__01ae2 /* message request */,
 #app-mount .callContainer_cb9592 /* vc */,
 .chat_f75fb0 /* general chat container (for browse channels page */,
-.animatedContainer_f37cb1 /* server image card */,
 .notice__6e2b9 /* banner notice */,
 .wrapper_cb9592.minimum_cb9592, /* private call */
 .wrapper_cb9592.minimum_cb9592 ~ .content_f75fb0 /* chat under private call */,
@@ -364,6 +365,11 @@ a[href="https://support.discord.com"] {
 .thin_d125d2.scrollerBase_d125d2,
 .layerContainer_da8173 .outer_c0bea0 /* profile popout */ {
     border-radius: var(--roundness-xl);
+    overflow: hidden;
+}
+
+.animatedContainer_f37cb1 /* server image card */ {
+    border-radius: var(--banner-roundness);
     overflow: hidden;
 }
 
@@ -665,8 +671,8 @@ button.button__201d5 /* small buttons */,
     content: '';
     display: var(--moon-icon);
     position: absolute;
-    width: 65%;
-    height: 65%;
+    width: 50%;
+    height: 50%;
     background: var(--primary-500);
     mask-image: var(--moon-icon-url);
     mask-size: var(--moon-icon-size);
@@ -677,12 +683,12 @@ button.button__201d5 /* small buttons */,
 }
 .wrapper__6e9f8:hover .childWrapper__6e9f8::before {
     transition: background-color 0.15s ease-out, transform var(--moon-spin-transition);
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg);
 }
 .wrapper__6e9f8:hover > .childWrapper__6e9f8::before,
 .wrapper__6e9f8.selected__6e9f8 > .childWrapper__6e9f8::before {
     background: var(--text-normal);
-    transform: rotate(-360deg) scale(0.8);
+    transform: rotate(-360deg);
 }
 .lowerBadge_cc5dd2::before {
     content: '';
@@ -851,13 +857,101 @@ button.button__67645 /* make user panel buttons round */ {
 .footer__214dc {
     background: var(--bg-overlay-app-frame, var(--background-primary));
 }
+
 .discoveryIcon_ef3116 {
-    color: var(--green-360);
+    color: var(--brand-500);
+    background: var(--background-secondary);
 }
 
 /* fix bottom left user profile corner roundness */
 .inner_c0bea0.panel_c0bea0 {
     border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
+}
+
+[class^=tipTitle] {
+    text-transform: none;
+    font-size: 0px;
+}
+
+[class^=tipTitle]::after {
+    content: "Vennie.";
+    font-size: 16px;
+}
+
+[class^="ready"] {
+    display: none;
+}
+
+[class^=container] > .content_de05de::before {
+    visibility: visible;
+    content: '';
+    display: block;
+    background: url("https://shirokazane.github.io/Material-You-Discord-Theme/assets/vennie.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 128px;
+    margin: auto;
+    margin-bottom: 48px;
+}
+
+[aria-label="Mute"] [aria-hidden="true"], [aria-label="Deafen"] [aria-hidden="true"]{
+  opacity: 0.4;
+}
+
+[class^="icon"]:has(path[d^="M16 4h.5v"]) path[d^="M16 4h.5v"] {
+  fill: var(--text-link) !important;
+  border: 1px solid rebeccapurple !important;
+}
+
+[class^="linkTop"]:has(path[d^="m19.8 22.6"]) [class^="icon"]:has(path[d^="M16 4h.5v"]) path[d^="M16 4h.5v"] {
+    fill: var(--text-warning) !important;
+    border: 1px solid rebeccapurple !important;
+}
+
+.icon__67ab4:has(path[d^="M18.09 1.63c"]) path[d^="M18.09 1.63c"] {
+  fill: var(--text-danger) !important;
+  border: 1px solid rebeccapurple !important;
+}
+
+/* Compact Mode */
+.compact_eda3c8 .headerText_bd68ec > .username__0b0e7::before {
+  content: '';
+  width: calc(100% + 6px);
+  height: 100%;
+  border-radius: 5px;
+  background-color: currentColor;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: -4px;
+  z-index: -1;
+}
+.compact_eda3c8 .headerText_bd68ec > .username__0b0e7::after {
+  content: ":";
+}
+
+/* Cozy Mode */
+.cozy_f5c119 .headerText_bd68ec > .username__0b0e7::before {
+  content: '';
+  width: calc(100% + 7px);
+  height: 100%;
+  border-radius: 5px;
+  background-color: currentColor;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  /* repairs left shift*/
+  left: -3px;
+}
+.cozy_f5c119 .headerText_bd68ec > .username__0b0e7::after {
+  content: ":";
+}
+/* repairs left shift */
+.cozy_f5c119 .headerText_bd68ec > .username__0b0e7 {
+  margin-left: 3px;
 }
 
 *::selection {
