@@ -157,6 +157,21 @@
     background-color: var(--background-secondary-alt) !important;
 }
 
+.container__37e49 /* user panel button strikethroughs */,
+.numberBadge__2b1f5  /* unread number badge */,
+.toolbar__9293f /* toolbar button strikethroughs */ {
+	--status-danger: var(--brand-500-hsl);
+}
+.expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] /* default color folder icons */ {
+	color: var(--brand-360-hsl) !important;
+}
+.divider__5126c /* unread divider */,
+.mention__3b95d /* NEW unread pill */,
+.mentionsBar__7aaec /* channel list new mention pill */ {
+	--status-danger: var(--brand-360-hsl);
+	color: var(--status-danger-text);
+}
+
 *::selection {
     /* Changes the color when selecting text */
     background-color: hsl(var(--background-hue) calc(var(--saturation-factor, 1) * 51.4% * calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(52.4% * var(--ui-lightness)), 42.4%) / 1) !important;
