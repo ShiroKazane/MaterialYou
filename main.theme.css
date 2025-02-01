@@ -482,7 +482,7 @@ button.button__201d5 /* small buttons */,
 
 /* separate guilds panel background */
 .guilds_c48ade {
-    background: var(--bg-4);
+    background: var(--background-primary);
     border-radius: var(--roundness-xl);
     margin: 0 0 var(--spacing) var(--spacing);
 }
@@ -531,7 +531,7 @@ button.button__201d5 /* small buttons */,
 }
 
 .childWrapper__6e9f8 {
-    background: var(--background-secondary);
+    background: var(--background-secondary-alt);
 }
 
 .container_c48ade > [style$='display: flex;'] > .guilds_c48ade {
