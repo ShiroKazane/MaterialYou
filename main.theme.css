@@ -149,15 +149,15 @@
 .container__37e49,
 .numberBadge__2b1f5,
 .toolbar__9293f {
-	--status-danger: hsl(var(--brand-500-hsl)/0.3);
+	--status-danger: var(--blue-345);
 }
 .expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] {
-	color: hsl(var(--brand-500-hsl)/0.3) !important;
+	color: var(--blue-330) !important;
 }
 .divider__5126c,
 .mention__3b95d,
 .mentionsBar__7aaec {
-	--status-danger: hsl(var(--brand-500-hsl)/0.3);
+	--status-danger: var(--blue-345);
 	color: var(--status-danger-text);
 }
 
