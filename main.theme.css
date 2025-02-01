@@ -33,59 +33,59 @@
      */
 
     /* top left corner text */
-	--corner-text: 'uwu';
+    --corner-text: 'uwu';
 
-	/* thickness of messages divider */
-	--divider-thickness: 3px;
+    /* thickness of messages divider */
+    --divider-thickness: 3px;
 
-	/* color of status indicators and window controls */
-	--online-indicator: hsl(92, 28%, 65%); /* change to #23a55a for default green */
-	--dnd-indicator: hsl(354, 42%, 56%); /* change to #f23f43 for default red */
-	--idle-indicator: hsl(40, 71%, 73%); /* change to #f0b232 for default yellow */
-	--streaming-indicator: hsl(311, 20%, 63%); /* change to #593695 for default purple */
+    /* color of status indicators and window controls */
+    --online-indicator: hsl(92, 28%, 65%); /* change to #23a55a for default green */
+    --dnd-indicator: hsl(354, 42%, 56%); /* change to #f23f43 for default red */
+    --idle-indicator: hsl(40, 71%, 73%); /* change to #f0b232 for default yellow */
+    --streaming-indicator: hsl(311, 20%, 63%); /* change to #593695 for default purple */
 
-    /* amount of spacing and padding */
-	--spacing: 12px;
+      /* amount of spacing and padding */
+    --spacing: 12px;
 
-	/* animations */
-	/* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
-	--list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
-	--unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
-	--moon-spin-transition: 0.4s ease; /* moon icon spin */
-	--icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
+    /* animations */
+    /* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
+    --list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
+    --unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+    --moon-spin-transition: 0.4s ease; /* moon icon spin */
+    --icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
 
-	/* corner roundness (border-radius) */
-	--roundness-xl: 22px; /* roundness of big panel outer corners */
-	--roundness-l: 20px; /* popout panels */
-	--roundness-m: 16px; /* smaller panels, images, embeds */
-	--roundness-s: 12px; /* members, settings inputs */
-	--roundness-xs: 10px; /* channels, buttons */
-	--roundness-xxs: 8px; /* searchbar, small elements */
+    /* corner roundness (border-radius) */
+    --roundness-xl: 22px; /* roundness of big panel outer corners */
+    --roundness-l: 20px; /* popout panels */
+    --roundness-m: 16px; /* smaller panels, images, embeds */
+    --roundness-s: 12px; /* members, settings inputs */
+    --roundness-xs: 10px; /* channels, buttons */
+    --roundness-xxs: 8px; /* searchbar, small elements */
 
-	/* direct messages moon icon */
-	/* change to block to show, none to hide */
-	--discord-icon: none; /* discord icon */
-	--moon-icon: block; /* moon icon */
-	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
-	--moon-icon-size: auto;
+    /* direct messages moon icon */
+    /* change to block to show, none to hide */
+    --discord-icon: none; /* discord icon */
+    --moon-icon: block; /* moon icon */
+    --moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
+    --moon-icon-size: auto;
 
-	/* filter uncolorable elements to fit theme */
-	/* (just set to none, they're too much work to configure) */
-	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
-	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
-	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+    /* filter uncolorable elements to fit theme */
+    /* (just set to none, they're too much work to configure) */
+    --login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
+    --green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
+    --blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
 
-	/* choose style for window control buttons (minimize-maximize-close) */
-	/* block to show, none to hide; choose only one to show!*/
-	--windows-nav: none; /* default windows-style buttons */
-	--custom-nav: block; /* custom mac-style buttons */
+    /* choose style for window control buttons (minimize-maximize-close) */
+    /* block to show, none to hide; choose only one to show!*/
+    --windows-nav: none; /* default windows-style buttons */
+    --custom-nav: block; /* custom mac-style buttons */
 }
 
 :root.reduce-motion {
-	--list-item-transition: none;
-	--unread-bar-transition: none;
-	--moon-spin-transition: none;
-	--icon-spin-transition: none;
+    --list-item-transition: none;
+    --unread-bar-transition: none;
+    --moon-spin-transition: none;
+    --icon-spin-transition: none;
 }
 
 :root,
@@ -149,7 +149,7 @@
 .container__37e49,
 .numberBadge__2b1f5,
 .toolbar__9293f {
-	  --status-danger: var(--brand-500);
+    --status-danger: var(--brand-500);
 }
 
 .expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] {
@@ -186,51 +186,51 @@
 
 rect[fill='#23a55a'],
 svg[fill='#23a55a'] {
-	fill: var(--online-indicator) !important;
+	  fill: var(--online-indicator) !important;
 }
 
 .status_a423bd[style='background-color: rgb(35, 165, 90);'] {
-	background-color: var(--online-indicator) !important;
+	  background-color: var(--online-indicator) !important;
 }
 
 rect[fill='#f0b232'],
 svg[fill='#f0b232'] {
-	fill: var(--idle-indicator);
+	  fill: var(--idle-indicator);
 }
 .status_a423bd[style='background-color: rgb(240, 178, 50);'] {
-	background-color: var(--idle-indicator) !important;
+	  background-color: var(--idle-indicator) !important;
 }
 
 rect[fill='#f23f43'],
 svg[fill='#f23f43'] {
-	fill: var(--dnd-indicator);
+	  fill: var(--dnd-indicator);
 }
 
 .status_a423bd[style='background-color: rgb(242, 63, 67);'] {
-	background-color: var(--dnd-indicator) !important;
+	  background-color: var(--dnd-indicator) !important;
 }
 
 rect[fill='#593695'],
 svg[fill='#593695'] {
-	fill: var(--streaming-indicator);
+	  fill: var(--streaming-indicator);
 }
 
 .status_a423bd[style='background-color: rgb(89, 54, 149);'] {
-	background-color: var(--streaming-indicator) !important;
+	  background-color: var(--streaming-indicator) !important;
 }
 
 /* color fix filters */
 .container_a14595:last-child .icon_a14595 {
-	background-color: #3ba55c;
-	filter: var(--green-to-accent-3-filter);
+	  background-color: #3ba55c;
+	  filter: var(--green-to-accent-3-filter);
 }
 
 .container_a14595:first-child .icon_a14595 {
-	filter: var(--blurple-to-accent-3-filter);
+	  filter: var(--blurple-to-accent-3-filter);
 }
 
 .artwork_eb4069 {
-	filter: var(--login-bg-filter);
+	  filter: var(--login-bg-filter);
 }
 
 *::selection {
