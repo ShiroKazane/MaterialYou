@@ -667,7 +667,7 @@ button.button__201d5 /* small buttons */,
     position: absolute;
     width: 65%;
     height: 65%;
-    background: var(--background-modifier-selected);
+    background: var(--primary-500);
     mask-image: var(--moon-icon-url);
     mask-size: var(--moon-icon-size);
     mask-repeat: none;
@@ -681,7 +681,7 @@ button.button__201d5 /* small buttons */,
 }
 .wrapper__6e9f8:hover > .childWrapper__6e9f8::before,
 .wrapper__6e9f8.selected__6e9f8 > .childWrapper__6e9f8::before {
-    background: var(--primary-500);
+    background: var(--text-normal);
     transform: rotate(-360deg) scale(0.8);
 }
 .lowerBadge_cc5dd2::before {
@@ -705,6 +705,159 @@ button.button__201d5 /* small buttons */,
 /* vencord spotify player support */
 #vc-spotify-player {
     --vc-spotify-green: var(--text-link);
+}
+
+/* improve unread divider */
+.divider__908e2 {
+    border-width: var(--divider-thickness);
+    border-radius: var(--divider-thickness);
+}
+.divider__908e2 .content__908e2 {
+    margin-top: calc(var(--divider-thickness) - var(--divider-thickness) * 2);
+}
+.endCap__908e2 {
+    margin-top: calc(var(--divider-thickness) / 2 - var(--divider-thickness));
+}
+/* improve highlight message left edge */
+.message__5126c.mentioned__5126c::before,
+.replying__5126c::before {
+    width: 4px;
+    border-radius: 4px;
+}
+/* modify embeds */
+.embedFull__623de {
+    border: 4px solid var(--background-tertiary);
+    border-top-color: transparent !important;
+    border-bottom-color: transparent !important;
+    border-right-color: transparent !important;
+}
+
+/* server selected marker */
+.item__58105 {
+    width: 4px;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+/* list hover animations */
+.wrapper__2ea32 .link__2ea32 /* channels */,
+.container__91a9d /* members */,
+.channel__972a0 /* dms */,
+.side_b3f026 .item_b3f026 /* settings */ {
+    transition: margin-left var(--list-item-transition);
+}
+.wrapper__2ea32:hover .link__2ea32,
+.side_b3f026 .item_b3f026:hover {
+    margin-left: 10px;
+}
+.container__91a9d:hover,
+.channel__972a0:hover {
+    margin-left: 18px;
+}
+
+/* spin hover animations */
+button.button__67645 /* make user panel buttons round */ {
+    border-radius: 50%;
+}
+.attachButton__0923f .attachButtonInner__0923f /* upload button */,
+.emojiButton_d0696b .contents__201d5 /* emoji button */,
+.closeButton_c2b141 /* settings exit button */,
+.contents__201d5 > .closeIcon__49fc1 /* modal close */ {
+    transition: transform var(--icon-spin-transition);
+}
+.button__67645:last-child:hover .contents__201d5,
+.attachButton__0923f:hover .attachButtonInner__0923f,
+.emojiButton_d0696b:hover .contents__201d5,
+.closeButton_c2b141:hover,
+.contents__201d5:hover > .closeIcon__49fc1 {
+    transform: rotate(360deg);
+}
+
+/* hide unread bar on hover */
+.messagesWrapper__36d07 {
+    overflow: hidden;
+}
+.newMessagesBar__0f481 {
+    top: -48px;
+    height: 72px;
+    transition: top var(--unread-bar-transition);
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+.newMessagesBar__0f481::before {
+    content: '';
+    background: var(--brand-500);
+    box-shadow: var(--elevation-low);
+    width: 100%;
+    position: absolute;
+    height: 32px;
+    border-radius: var(--roundness-s);
+}
+.newMessagesBar__0f481:hover {
+    top: -12px;
+}
+.top__7aaec > .containerPadding__7aaec {
+    padding: 16px;
+    margin-top: -40px;
+    transition: margin-top var(--unread-bar-transition);
+}
+.top__7aaec:hover > .containerPadding__7aaec:hover {
+    margin-top: -12px;
+}
+.bottom__7aaec > .containerPadding__7aaec {
+    padding: 16px;
+    margin-bottom: -40px;
+    transition: margin-bottom var(--unread-bar-transition);
+}
+.bottom__7aaec > .containerPadding__7aaec:hover {
+    margin-bottom: -12px;
+}
+
+/* Decor Compat */
+.vc-decor-sectioned-grid-list-container {
+    border-radius: 0% !important;
+    overflow: scroll !important;
+}
+
+/* Call background fits theme */
+.callContainer_cb9592 {
+    background: var(--background-primary);
+}
+
+/* Remove gradient from call containers */
+.gradientContainer_bfe55a {
+    visibility: hidden;
+}
+
+/* Call padding */
+.wrapper_cb9592.normal_cb9592 {
+    padding-bottom: var(--spacing);
+}
+
+/* change own profile hover to match border roundness */
+.avatarWrapper__37e49:hover {
+    border-radius: var(--roundness-xl);
+}
+
+/* fix scrollbars in emotes menu */
+.content_fed6d3 .thin__99f8c::-webkit-scrollbar-thumb,
+.wrapper_e94b8c .thin_d125d2::-webkit-scrollbar-thumb,
+.listWrapper_c656ac .thin_d125d2::-webkit-scrollbar-thumb {
+    background-color: var(--background-tertiary);
+}
+
+/* fix discovery icon */
+.footer__214dc {
+    background: var(--bg-overlay-app-frame, var(--background-primary));
+}
+.discoveryIcon_ef3116 {
+    color: var(--green-360);
+}
+
+/* fix bottom left user profile corner roundness */
+.inner_c0bea0.panel_c0bea0 {
+    border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
 *::selection {
