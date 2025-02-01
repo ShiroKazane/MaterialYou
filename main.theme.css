@@ -163,7 +163,7 @@
 .numberBadge__2b1f5,
 .toolbar__9293f {
     --status-danger: var(--bg-brand);
-    color: var(--text-muted);
+    color: var(--primary-500);
 }
 
 .expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] {
