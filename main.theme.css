@@ -233,6 +233,25 @@ svg[fill='#593695'] {
 	  filter: var(--login-bg-filter);
 }
 
+.clipContainer__841c8 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.chatContent_f75fb0::before /* main chat */,
+.membersWrap_c8ffbb::before /* member list */,
+.searchResultsWrap_a9e706::before /* search results */,
+.outer_c0bea0.panel_c0bea0::before /* dm profile */,
+.container_f369db::before /* forums */ {
+    content: '';
+    position: absolute;
+    margin-top: -48px;
+    background: var(--background-primary);
+    width: 100%;
+    height: 48px;
+    border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
+}
+
 *::selection {
     /* Changes the color when selecting text */
     background-color: hsl(var(--background-hue) calc(var(--saturation-factor, 1) * 51.4% * calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(52.4% * var(--ui-lightness)), 42.4%) / 1) !important;
