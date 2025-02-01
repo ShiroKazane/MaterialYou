@@ -152,8 +152,12 @@
 	--status-danger: var(--brand-500);
 }
 
-[class$="FolderIconWrapper__48112"] > svg[style="color: rgb(88, 101, 242);"] {
-	color: var(--blue-330) !important;
+.expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] {
+	color: var(--brand-500) !important;
+}
+
+.closedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] {
+  background-color: var(--background-primary) !important;
 }
 
 .divider__5126c,
