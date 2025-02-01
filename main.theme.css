@@ -146,6 +146,17 @@
     background-color: var(--background-secondary-alt) !important;
 }
 
+.chat_f75fb0 /* chat + member list */,
+.sidebar_c48ade /* channel sidebar */,
+.privateChannels__35e86 .scroller__99e7c /* dms list inner */,
+#app-mount .innerHeader__0b563:after /* channels and roles header shadow */,
+.stackedBars__74017 /* reply bar underneath */ {
+    background: none;
+}
+.contentContainer_a56260 /* quests page fix */ {
+    background: none !important;
+}
+
 .container__37e49,
 .numberBadge__2b1f5,
 .toolbar__9293f {
