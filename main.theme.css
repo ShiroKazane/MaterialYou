@@ -784,8 +784,8 @@ button.button__67645 /* make user panel buttons round */ {
     overflow: hidden;
 }
 .newMessagesBar__0f481 {
-    top: -53px;
-    height: 72px;
+    top: -64px;
+    height: 92px;
     transition: top var(--unread-bar-transition);
     background: none;
     box-shadow: none;
@@ -801,7 +801,7 @@ button.button__67645 /* make user panel buttons round */ {
     border-radius: var(--roundness-s);
 }
 .newMessagesBar__0f481:hover {
-    top: -17px;
+    top: -24px;
 }
 .top__7aaec > .containerPadding__7aaec {
     padding: 16px;
@@ -809,7 +809,7 @@ button.button__67645 /* make user panel buttons round */ {
     transition: margin-top var(--unread-bar-transition);
 }
 .top__7aaec:hover > .containerPadding__7aaec:hover {
-    margin-top: -32px;
+    margin-top: -12px;
 }
 .bottom__7aaec > .containerPadding__7aaec {
     padding: 16px;
@@ -817,7 +817,7 @@ button.button__67645 /* make user panel buttons round */ {
     transition: margin-bottom var(--unread-bar-transition);
 }
 .bottom__7aaec > .containerPadding__7aaec:hover {
-    margin-bottom: -32px;
+    margin-bottom: -12px;
 }
 
 /* Decor Compat */
