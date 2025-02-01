@@ -674,7 +674,7 @@ button.button__201d5 /* small buttons */,
     position: absolute;
     width: 50%;
     height: 50%;
-    background: var(--bg-brand);
+    background: var(--primary-500);
     mask-image: var(--moon-icon-url);
     mask-size: var(--moon-icon-size);
     mask-repeat: none;
