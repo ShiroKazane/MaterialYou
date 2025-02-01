@@ -156,7 +156,7 @@
 	  color: var(--brand-500) !important;
 }
 
-.folderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242, 0.4);"] {
+.folderIconWrapper__48112[style="background-color: rgba(88, 101, 242, 0.4);"] {
     background-color: var(--background-secondary) !important;
 }
 
