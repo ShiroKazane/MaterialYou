@@ -656,6 +656,57 @@ button.button__201d5 /* small buttons */,
     background-color: var(--idle-indicator) !important;
 }
 
+/* custom dm button moon icon */
+.childWrapper__6e9f8 > svg:not(.favoriteIcon_c9fddf) {
+    display: var(--discord-icon);
+}
+
+.childWrapper__6e9f8:has(> svg:not(.favoriteIcon_c9fddf))::before {
+    content: '';
+    display: var(--moon-icon);
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    background: var(--background-modifier-selected);
+    mask-image: var(--moon-icon-url);
+    mask-size: var(--moon-icon-size);
+    mask-repeat: none;
+    -webkit-mask-image: var(--moon-icon-url);
+    -webkit-mask-size: var(--moon-icon-size);
+    -webkit-mask-repeat: none;
+}
+.wrapper__6e9f8:hover .childWrapper__6e9f8::before {
+    transition: background-color 0.15s ease-out, transform var(--moon-spin-transition);
+    transform: rotate(0deg) scale(1);
+}
+.wrapper__6e9f8:hover > .childWrapper__6e9f8::before,
+.wrapper__6e9f8.selected__6e9f8 > .childWrapper__6e9f8::before {
+    background: var(--text-0);
+    transform: rotate(-360deg) scale(0.8);
+}
+.lowerBadge_cc5dd2::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transform: translate(-4px, -4px);
+    z-index: -1;
+    background: var(--background-secondary-alt);
+    border-radius: 50%;
+}
+/* custom dm button background instead of icon */
+/* .childWrapper__6e9f8:has(> svg:not(.favoriteIcon_c9fddf)) {
+    background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
+    background-color: transparent !important;
+    background-size: cover;
+} */
+
+/* vencord spotify player support */
+#vc-spotify-player {
+    --vc-spotify-green: var(--text-link);
+}
+
 *::selection {
     /* Changes the color when selecting text */
     background-color: hsl(var(--background-hue) calc(var(--saturation-factor, 1) * 51.4% * calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(52.4% * var(--ui-lightness)), 42.4%) / 1) !important;
