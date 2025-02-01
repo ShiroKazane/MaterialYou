@@ -149,22 +149,88 @@
 .container__37e49,
 .numberBadge__2b1f5,
 .toolbar__9293f {
-	--status-danger: var(--brand-500);
+	  --status-danger: var(--brand-500);
 }
 
 .expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] {
-	color: var(--brand-500) !important;
+	  color: var(--brand-500) !important;
 }
 
-.folderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] {
-  background-color: var(--background-secondary) !important;
+.folderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242, 0.4);"] {
+    background-color: var(--background-secondary) !important;
 }
 
 .divider__5126c,
 .mention__3b95d,
 .mentionsBar__7aaec {
-	--status-danger: var(--brand-500);
-	color: var(--status-danger-text);
+	  --status-danger: var(--brand-500);
+	  color: var(--status-danger-text);
+}
+
+.mention__3b95d:active {
+	  background: var(--brand-560);
+}
+
+.container__87bf1 {
+	  transition: background-color ease 0.3s;
+}
+
+.mini_a562c8 .grabber_a562c8 {
+    margin-top: 4px;
+    border-width: 1px;
+}
+
+.grabber_a562c8 {
+	  border-width: 0;
+}
+
+rect[fill='#23a55a'],
+svg[fill='#23a55a'] {
+	fill: var(--online-indicator) !important;
+}
+
+.status_a423bd[style='background-color: rgb(35, 165, 90);'] {
+	background-color: var(--online-indicator) !important;
+}
+
+rect[fill='#f0b232'],
+svg[fill='#f0b232'] {
+	fill: var(--idle-indicator);
+}
+.status_a423bd[style='background-color: rgb(240, 178, 50);'] {
+	background-color: var(--idle-indicator) !important;
+}
+
+rect[fill='#f23f43'],
+svg[fill='#f23f43'] {
+	fill: var(--dnd-indicator);
+}
+
+.status_a423bd[style='background-color: rgb(242, 63, 67);'] {
+	background-color: var(--dnd-indicator) !important;
+}
+
+rect[fill='#593695'],
+svg[fill='#593695'] {
+	fill: var(--streaming-indicator);
+}
+
+.status_a423bd[style='background-color: rgb(89, 54, 149);'] {
+	background-color: var(--streaming-indicator) !important;
+}
+
+/* color fix filters */
+.container_a14595:last-child .icon_a14595 {
+	background-color: #3ba55c;
+	filter: var(--green-to-accent-3-filter);
+}
+
+.container_a14595:first-child .icon_a14595 {
+	filter: var(--blurple-to-accent-3-filter);
+}
+
+.artwork_eb4069 {
+	filter: var(--login-bg-filter);
 }
 
 *::selection {
