@@ -882,7 +882,7 @@ button.button__67645 /* make user panel buttons round */ {
     display: none;
 }
 
-[class^=container] > .content_de05de::before {
+[class^=container] > .content_a2f514::before {
     visibility: visible;
     content: '';
     display: block;
