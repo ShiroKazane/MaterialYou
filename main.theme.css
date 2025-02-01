@@ -6,9 +6,6 @@
  * @source https://github.com/ShiroKazane/Material-You-Discord-Theme
 */
 
-/* Imports */
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 /* Variables */
 :root {
     /*
@@ -34,9 +31,6 @@
     /*
      * other things
      */
-
-    /* font, change to 'gg sans' for default discord font*/
-	--font: 'figtree';
 
     /* top left corner text */
 	--corner-text: 'uwu';
@@ -85,11 +79,6 @@
 	/* block to show, none to hide; choose only one to show!*/
 	--windows-nav: none; /* default windows-style buttons */
 	--custom-nav: block; /* custom mac-style buttons */
-}
-
-:root {
-	--font-primary: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	--font-display: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 :root.reduce-motion {

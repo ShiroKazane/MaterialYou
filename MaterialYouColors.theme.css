@@ -37,9 +37,6 @@
 	--idle-indicator: hsl(40, 71%, 73%); /* change to #f0b232 for default yellow */
 	--streaming-indicator: hsl(311, 20%, 63%); /* change to #593695 for default purple */
 
-    /* font, change to 'gg sans' for default discord font*/
-	--font: 'figtree';
-
     /* top left corner text */
 	--corner-text: 'uwu';
 
