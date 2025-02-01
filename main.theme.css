@@ -146,18 +146,18 @@
     background-color: var(--background-secondary-alt) !important;
 }
 
-.container__37e49 /* user panel button strikethroughs */,
-.numberBadge__2b1f5  /* unread number badge */,
-.toolbar__9293f /* toolbar button strikethroughs */ {
-	--status-danger: var(--brand-500);
+.container__37e49,
+.numberBadge__2b1f5,
+.toolbar__9293f {
+	--status-danger: hsl(var(--brand-500-hsl)/0.3);
 }
-.expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] /* default color folder icons */ {
-	color: var(--brand-360) !important;
+.expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] {
+	color: hsl(var(--brand-500-hsl)/0.3) !important;
 }
-.divider__5126c /* unread divider */,
-.mention__3b95d /* NEW unread pill */,
-.mentionsBar__7aaec /* channel list new mention pill */ {
-	--status-danger: var(--brand-360);
+.divider__5126c,
+.mention__3b95d,
+.mentionsBar__7aaec {
+	--status-danger: hsl(var(--brand-500-hsl)/0.3);
 	color: var(--status-danger-text);
 }
 
