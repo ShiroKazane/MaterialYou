@@ -784,7 +784,7 @@ button.button__67645 /* make user panel buttons round */ {
     overflow: hidden;
 }
 .newMessagesBar__0f481 {
-    top: -48px;
+    top: -53px;
     height: 72px;
     transition: top var(--unread-bar-transition);
     background: none;
@@ -801,23 +801,23 @@ button.button__67645 /* make user panel buttons round */ {
     border-radius: var(--roundness-s);
 }
 .newMessagesBar__0f481:hover {
-    top: -12px;
+    top: -17px;
 }
 .top__7aaec > .containerPadding__7aaec {
     padding: 16px;
-    margin-top: -40px;
+    margin-top: -60px;
     transition: margin-top var(--unread-bar-transition);
 }
 .top__7aaec:hover > .containerPadding__7aaec:hover {
-    margin-top: -12px;
+    margin-top: -32px;
 }
 .bottom__7aaec > .containerPadding__7aaec {
     padding: 16px;
-    margin-bottom: -40px;
+    margin-bottom: -60px;
     transition: margin-bottom var(--unread-bar-transition);
 }
 .bottom__7aaec > .containerPadding__7aaec:hover {
-    margin-bottom: -12px;
+    margin-bottom: -32px;
 }
 
 /* Decor Compat */
@@ -859,7 +859,7 @@ button.button__67645 /* make user panel buttons round */ {
 }
 
 .discoveryIcon_ef3116 {
-    color: var(--brand-500);
+    color: var(--text-normal);
     background: var(--background-secondary);
 }
 
@@ -897,12 +897,17 @@ button.button__67645 /* make user panel buttons round */ {
 }
 
 [aria-label="Mute"] [aria-hidden="true"], [aria-label="Deafen"] [aria-hidden="true"]{
-  opacity: 0.4;
+    opacity: 0.4;
 }
 
 [class^="icon"]:has(path[d^="M16 4h.5v"]) path[d^="M16 4h.5v"] {
-  fill: var(--text-link) !important;
-  border: 1px solid rebeccapurple !important;
+    fill: var(--text-link) !important;
+    border: 1px solid rebeccapurple !important;
+}
+
+[class^="icon"]:has(path[d^="M16.5 18H16a1"]) path[d^="M16.5 18H16a1"] {
+    fill: var(--text-link) !important;
+    border: 1px solid rebeccapurple !important;
 }
 
 [class^="linkTop"]:has(path[d^="m19.8 22.6"]) [class^="icon"]:has(path[d^="M16 4h.5v"]) path[d^="M16 4h.5v"] {
@@ -910,48 +915,48 @@ button.button__67645 /* make user panel buttons round */ {
     border: 1px solid rebeccapurple !important;
 }
 
-.icon__67ab4:has(path[d^="M18.09 1.63c"]) path[d^="M18.09 1.63c"] {
-  fill: var(--text-danger) !important;
-  border: 1px solid rebeccapurple !important;
+.icon__2ea32:has(path[d^="M18.09 1.63c"]) path[d^="M18.09 1.63c"] {
+    fill: var(--text-danger) !important;
+    border: 1px solid rebeccapurple !important;
 }
 
 /* Compact Mode */
 .compact_eda3c8 .headerText_bd68ec > .username__0b0e7::before {
-  content: '';
-  width: calc(100% + 6px);
-  height: 100%;
-  border-radius: 5px;
-  background-color: currentColor;
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  left: -4px;
-  z-index: -1;
+    content: '';
+    width: calc(100% + 6px);
+    height: 100%;
+    border-radius: 5px;
+    background-color: currentColor;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: -4px;
+    z-index: -1;
 }
 .compact_eda3c8 .headerText_bd68ec > .username__0b0e7::after {
-  content: ":";
+    content: ":";
 }
 
 /* Cozy Mode */
 .cozy_f5c119 .headerText_bd68ec > .username__0b0e7::before {
-  content: '';
-  width: calc(100% + 7px);
-  height: 100%;
-  border-radius: 5px;
-  background-color: currentColor;
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  /* repairs left shift*/
-  left: -3px;
+    content: '';
+    width: calc(100% + 7px);
+    height: 100%;
+    border-radius: 5px;
+    background-color: currentColor;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    /* repairs left shift*/
+    left: -3px;
 }
 .cozy_f5c119 .headerText_bd68ec > .username__0b0e7::after {
-  content: ":";
+    content: ":";
 }
 /* repairs left shift */
 .cozy_f5c119 .headerText_bd68ec > .username__0b0e7 {
-  margin-left: 3px;
+    margin-left: 3px;
 }
 
 *::selection {
