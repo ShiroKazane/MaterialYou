@@ -38,10 +38,10 @@ function benchmarkSelectors(cssString) {
     .map((selector) => {
       try {
         const [time, matches] = benchmarkSelector(selector);
-        let performance = 'Fast';
-        if (time > 0.5) performance = 'Slow';
-        else if (time > 0.2) performance = 'Medium';
-        return { selector, time, matches, performance };
+        let performanceRating = 'Fast';
+        if (time > 0.5) performanceRating = 'Slow';
+        else if (time > 0.2) performanceRating = 'Medium';
+        return { selector, time, matches, performanceRating };
       } catch (error) {
         console.error(`Error benchmarking "${selector}": ${error.message}`);
         return null;

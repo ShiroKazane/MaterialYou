@@ -104,6 +104,9 @@
     --blue-330-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--link-lightness) + 0.5))) min(calc(59% * var(--link-lightness)), 99%) !important;
     --blue-345-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--link-lightness) + 0.5))) min(calc(49.4% * var(--link-lightness)), 89.4%) !important;
     --blue-430-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--link-lightness) + 0.5))) min(calc(45.3% * var(--link-lightness)), 85.3%) !important;
+
+    /* change the color of mentioned message background */
+    --background-mentioned: var(--background-secondary-alt);
 }
 
 .theme-dark .container__03ec9,
@@ -704,6 +707,7 @@ button.button__201d5 /* small buttons */,
 .replying__5126c::before {
     width: 4px;
     border-radius: 4px;
+    background: var(--primary-500);
 }
 /* modify embeds */
 .embedFull__623de {
