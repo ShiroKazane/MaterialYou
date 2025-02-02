@@ -1,5 +1,5 @@
 <div align=center>
-<h1>Material You Discord Colors</h1>
+<h1>Material You Discord Theme</h1>
 <p>Change Discord's colors to match your favourite color theme</p>
 </div>
 
@@ -33,6 +33,7 @@ and other thing
 
 * `--corner-text`: change text at top left corner. It is set to 'uwu' by default, so change it to your desire.
 * `--divider-thickness`: change how thick divider between messages. It is set to 3px by default.
+* `--spacing`: change the amount of spacing or padding between ui. It is set to 12px by default.
 
 ### Preview
 

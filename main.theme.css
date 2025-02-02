@@ -2,7 +2,7 @@
  * @name Material You
  * @author ShiroKzn
  * @version 1.1.0
- * @description an Material You Colors implementation with Midnight Base UI.
+ * @description A Material You Colors implementation with Midnight Base UI.
  * @source https://github.com/ShiroKazane/Material-You-Discord-Theme
 */
 
@@ -40,7 +40,7 @@
 
     --discord-icon: none;
     --moon-icon: block;
-    --moon-icon-url: url('https://ShiroKazane.github.io/Material-You-Discord-Theme/moon.svg');
+    --moon-icon-url: url('https://ShiroKazane.github.io/Material-You-Discord-Theme/assets/moon.svg');
     --moon-icon-size: auto;
 
     --login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4);
@@ -341,7 +341,7 @@ a[href='https://support.discord.com'] {
 /* discover page sidebar & wrappers */
 .sidebarContainer_a3a4ce,
 .pageWrapper_a3a4ce,
-.thin_d125d2.scrollerBase_d125d2,
+.thin_d125d2.scrollerBase_d125d2:not(.sidebarRegionScroller__23e6b),
 .layerContainer_da8173 .outer_c0bea0 /* profile popout */ {
     border-radius: var(--roundness-xl);
     overflow: hidden;
