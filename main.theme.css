@@ -883,3 +883,12 @@ button.button__67645 /* make user panel buttons round */ {
 .cozy_f5c119 .headerText_bd68ec > .username__0b0e7 {
     margin-left: 3px;
 }
+
+.overflow-y-scroll,
+.overflow-y-auto,
+.overflow-x-scroll,
+.overflow-x-auto,
+.overflow-auto,
+.overflow-scroll {
+    will-change: scroll-position;
+}
