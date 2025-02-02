@@ -108,6 +108,9 @@
     /* change the color of mentioned message background */
     --background-mentioned: var(--background-secondary);
     --background-mentioned-hover: var(--background-secondary-alt);
+
+    /* change the color of popout background */
+    --background-floating: var(--background-tertiary);
 }
 
 .theme-dark .container__03ec9,
@@ -338,6 +341,7 @@ a[href='https://support.discord.com'] {
 .wrapper_cb9592.minimum_cb9592, /* private call */
 .wrapper_cb9592.minimum_cb9592 ~ .content_f75fb0 /* chat under private call */,
 .main_c08b38 /* server onboarding */,
+.popout__76f04 /* thread popout */,
 /* discover page sidebar & wrappers */
 .sidebarContainer_a3a4ce,
 .pageWrapper_a3a4ce,
