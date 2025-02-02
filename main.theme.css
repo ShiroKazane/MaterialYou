@@ -106,7 +106,8 @@
     --blue-430-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--link-lightness) + 0.5))) min(calc(45.3% * var(--link-lightness)), 85.3%) !important;
 
     /* change the color of mentioned message background */
-    --background-mentioned: var(--background-secondary-alt);
+    --background-mentioned: var(--background-secondary);
+    --background-mentioned-hover: var(--background-secondary-alt);
 }
 
 .theme-dark .container__03ec9,
