@@ -18,13 +18,13 @@ function benchmarkSelectors(cssString) {
 
     let selectors = cssString
       .split(/,(?![^(]*\))|[\n\r]+/) // Split by commas or newline
-      .map((s) => s.trim().replace(/::(?:before|after)/, '')) // Trim pseudo-elements
+      .map(s => s.trim().replace(/::(?:before|after)/, '')) // Trim pseudo-elements
       .filter(Boolean); // Remove empty strings
 
     return selectors;
   }
 
-  const benchmarkSelector = (selector) => {
+  const benchmarkSelector = selector => {
     const start = performance.now();
     let matches = 0;
     for (let i = 0; i < 1000; i++) {
@@ -35,7 +35,7 @@ function benchmarkSelectors(cssString) {
 
   // Generate CSV content
   const csvContent = extractSelectors(cssString)
-    .map((selector) => {
+    .map(selector => {
       try {
         const [time, matches] = benchmarkSelector(selector);
         let performanceRating = 'Fast';
