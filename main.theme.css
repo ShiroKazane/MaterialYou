@@ -153,7 +153,7 @@
 }
 
 .expandedFolderIconWrapper__48112:hover > svg[style='color: rgb(88, 101, 242);'] {
-    color: var(--text-normal)
+    color: var(--text-normal) !important;
 }
 
 .divider__5126c,
@@ -804,7 +804,7 @@ button.button__67645 /* make user panel buttons round */ {
     background: var(--background-secondary);
 }
 
-.folder__48112.hover__48112 {
+.folder__48112.hover__48112:not(:has(.folderIconWrapper__48112)) {
     color: var(--text-normal);
     background: var(--bg-brand);
 }
