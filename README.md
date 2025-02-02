@@ -3,6 +3,8 @@
 <p>Change Discord's colors to match your favourite color theme</p>
 </div>
 
+This is combine of [Material You Base Coloring](https://github.com/JustAlittleWolf/Material-You-Discord-Theme) with [Midnight Base UI](https://github.com/refact0r/midnight-discord)
+
 ### Installation
 
 #### Openasar
@@ -12,6 +14,10 @@ Copy and paste the contents of [MaterialYouColors.theme.css](https://github.com/
 #### Better Discord
 
 Download the latest [Release](https://github.com/ShiroKazane/Material-You-Discord-Theme/releases) and drop it into your Themes folder
+
+#### Vencord
+
+Copy and paste https://ShiroKazane.github.io/Material-You-Discord-Theme/MaterialYouColors.theme.css
 
 ### Customization
 
@@ -23,16 +29,21 @@ In the main css file you will find some variables that you can change to match y
 * `--link-lightness`: change how brightly links are displayed. You probably need to lower this value a bit if you are using light mode.
 * `--ui-lightness`: change how bright the Discord logo and some buttons are. With bright colors like yellow reducing this value improves readability in the settings page.
 
+and other thing
+
+* `--corner-text`: change text at top left corner. It is set to 'uwu' by default, so change it to your desire.
+* `--divider-thickness`: change how thick divider between messages. It is set to 3px by default.
+
 ### Preview
 
 Change Discord to any color you want
 
-![Dark Mode](images/DarkMode.png)
+![Dark Mode](assets/images/DarkMode.png)
 
 Everything is themed uniformly
 
-![Settings](images/Settings.png)
+![Settings](assets/images/Settings.png)
 
 Light mode works as well
 
-![Light Mode](images/LightMode.png)
+![Light Mode](assets/images/LightMode.png)

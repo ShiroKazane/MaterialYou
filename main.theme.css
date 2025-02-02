@@ -8,81 +8,50 @@
 
 /* Variables */
 :root {
-    /*
-     * Select which hue of color you want Discord to be themed in.
-     * You can select a hue by going to https://htmlcolorcodes.com/color-picker/,
-     * selecting a color, then copying the "H" value and pasting it in below.
-     * range: 0.0-360.0
-     */
     --background-hue: 19;
-
-    /* suggested range: 0.5-10.0 */
     --background-saturation: 1.0;
-
-    /* suggested range: 0.8-2.5 */
     --background-lightness: 1.0;
-
-    /* suggested range: 0.5-2.0 */
     --link-lightness: 1.5;
-
-    /* suggested range: 0.7-1.2 */
     --ui-lightness: 1.0;
 
-    /*
-     * other things
-     */
-
-    /* top left corner text */
     --corner-text: 'uwu';
-
-    /* thickness of messages divider */
     --divider-thickness: 3px;
 
-    /* color of status indicators and window controls */
-    --online-indicator: hsl(92, 28%, 65%); /* change to #23a55a for default green */
-    --dnd-indicator: hsl(354, 42%, 56%); /* change to #f23f43 for default red */
-    --idle-indicator: hsl(40, 71%, 73%); /* change to #f0b232 for default yellow */
-    --streaming-indicator: hsl(311, 20%, 63%); /* change to #593695 for default purple */
+    --online-indicator: hsl(92, 28%, 65%);
+    --dnd-indicator: hsl(354, 42%, 56%);
+    --idle-indicator: hsl(40, 71%, 73%);
+    --streaming-indicator: hsl(311, 20%, 63%);
 
-      /* amount of spacing and padding */
     --spacing: 12px;
 
-    /* animations */
-    /* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
-    --list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
-    --unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
-    --moon-spin-transition: 0.4s ease; /* moon icon spin */
-    --icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
+    --list-item-transition: 0.2s ease;
+    --unread-bar-transition: 0.2s ease;
+    --moon-spin-transition: 0.4s ease;
+    --icon-spin-transition: 1s ease;
 
-    /* corner roundness (border-radius) */
-    --roundness-xl: 22px; /* roundness of big panel outer corners */
-    --roundness-l: 20px; /* popout panels */
-    --roundness-m: 16px; /* smaller panels, images, embeds */
-    --roundness-s: 12px; /* members, settings inputs */
-    --roundness-xs: 10px; /* channels, buttons */
-    --roundness-xxs: 8px; /* searchbar, small elements */
+    --roundness-xl: 22px;
+    --roundness-l: 20px;
+    --roundness-m: 16px;
+    --roundness-s: 12px;
+    --roundness-xs: 10px;
+    --roundness-xxs: 8px;
 
-    --banner-roundness: 22px 22px 0 0; /* server banner corner, 0 for bottom */
+    --banner-roundness: 22px 22px 0 0;
 
-    /* direct messages moon icon */
-    /* change to block to show, none to hide */
-    --discord-icon: none; /* discord icon */
-    --moon-icon: block; /* moon icon */
-    --moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
+    --discord-icon: none;
+    --moon-icon: block;
+    --moon-icon-url: url('https://ShiroKazane.github.io/Material-You-Discord-Theme/moon.svg');
     --moon-icon-size: auto;
 
-    /* filter uncolorable elements to fit theme */
-    /* (just set to none, they're too much work to configure) */
-    --login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
-    --green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
-    --blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+    --login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4);
+    --green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43);
+    --blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2);
 
-    /* choose style for window control buttons (minimize-maximize-close) */
-    /* block to show, none to hide; choose only one to show!*/
-    --windows-nav: none; /* default windows-style buttons */
-    --custom-nav: block; /* custom mac-style buttons */
+    --windows-nav: none;
+    --custom-nav: block;
 }
 
+/* Reduce motion */
 :root.reduce-motion {
     --list-item-transition: none;
     --unread-bar-transition: none;
@@ -90,10 +59,10 @@
     --icon-spin-transition: none;
 }
 
+/* Changes all of the main colors of the discord client */
 :root,
 .default-colors,
 .profileColors-3Y0XaR {
-    /* changes all of the main colors of the discord client */
     --primary-100-hsl: var(--background-hue) min(calc(var(--saturation-factor, 1) * 5.9% * var(--background-saturation)), 100%) min(calc(96.7% * var(--background-lightness)), 100%) !important;
     --primary-130-hsl: var(--background-hue) min(calc(var(--saturation-factor, 1) * 9.1% * var(--background-saturation)), 100%) min(calc(95.7% * var(--background-lightness)), 100%) !important;
     --primary-160-hsl: var(--background-hue) min(calc(var(--saturation-factor, 1) * 9.7% * var(--background-saturation)), 100%) min(calc(93.9% * var(--background-lightness)), 100%) !important;
@@ -148,6 +117,11 @@
     background-color: var(--background-secondary-alt) !important;
 }
 
+*::selection {
+    /* Changes the color when selecting text */
+    background-color: hsl(var(--background-hue) calc(var(--saturation-factor, 1) * 51.4% * calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(52.4% * var(--ui-lightness)), 42.4%) / 1) !important;
+}
+
 .chat_f75fb0 /* chat + member list */,
 .sidebar_c48ade /* channel sidebar */,
 .privateChannels__35e86 .scroller__99e7c /* dms list inner */,
@@ -166,11 +140,11 @@
     color: var(--primary-500);
 }
 
-.expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] {
+.expandedFolderIconWrapper__48112 > svg[style='color: rgb(88, 101, 242);'] {
     color: var(--bg-brand) !important;
 }
 
-.folderIconWrapper__48112[style="background-color: rgba(88, 101, 242, 0.4);"] {
+.folderIconWrapper__48112[style='background-color: rgba(88, 101, 242, 0.4);'] {
     background-color: var(--background-secondary) !important;
 }
 
@@ -200,7 +174,7 @@
 
 rect[fill='#23a55a'],
 svg[fill='#23a55a'] {
-	  fill: var(--online-indicator) !important;
+    fill: var(--online-indicator) !important;
 }
 
 .status_a423bd[style='background-color: rgb(35, 165, 90);'] {
@@ -221,7 +195,7 @@ svg[fill='#f23f43'] {
 }
 
 .status_a423bd[style='background-color: rgb(242, 63, 67);'] {
-	  background-color: var(--dnd-indicator) !important;
+    background-color: var(--dnd-indicator) !important;
 }
 
 rect[fill='#593695'],
@@ -235,16 +209,16 @@ svg[fill='#593695'] {
 
 /* color fix filters */
 .container_a14595:last-child .icon_a14595 {
-	  background-color: #3ba55c;
-	  filter: var(--green-to-accent-3-filter);
+    background-color: #3ba55c;
+    filter: var(--green-to-accent-3-filter);
 }
 
 .container_a14595:first-child .icon_a14595 {
-	  filter: var(--blurple-to-accent-3-filter);
+    filter: var(--blurple-to-accent-3-filter);
 }
 
 .artwork_eb4069 {
-	  filter: var(--login-bg-filter);
+    filter: var(--login-bg-filter);
 }
 
 .clipContainer__841c8 {
@@ -282,7 +256,7 @@ svg[fill='#593695'] {
     height: 100%;
 }
 
-a[href="https://support.discord.com"] {
+a[href='https://support.discord.com'] {
     display: none;
 }
 
@@ -308,41 +282,41 @@ a[href="https://support.discord.com"] {
 
 /* add spacing */
 .base_c48ade /* outside edges */ {
-	  margin: 0 var(--spacing) var(--spacing) 0;
+    margin: 0 var(--spacing) var(--spacing) 0;
 }
 
 .sidebar_c48ade /* channel list and user panel */,
 .content_f75fb0 /* between chat and member list */ {
-	  gap: var(--spacing);
+    gap: var(--spacing);
 }
 
 .sidebar_c48ade /* channel list and chat */ {
-	  margin-right: var(--spacing);
+    margin-right: var(--spacing);
 }
 
 .sidebar_c48ade.hidden_c48ade {
-	  margin-right: 0;
+    margin-right: 0;
 }
 
 .resizeHandle__01ae2 /* pretend to be a margin */ {
-	  width: var(--spacing);
+    width: var(--spacing);
 }
 
 .wrapper_cb9592.fullScreen_cb9592 .callContainer_cb9592,
 .fullScreen_cb9592 + .layerContainer_da8173 + .layerContainer_da8173 .container__01ae2 /* fullscreen vc */ {
-	  margin-top: var(--spacing);
+    margin-top: var(--spacing);
 }
 
 .notice__6e2b9 /* banner notice */,
 .wrapper_cb9592.minimum_cb9592 /* private call */ {
-	  margin-bottom: var(--spacing);
+    margin-bottom: var(--spacing);
 }
 
 /* fix padding */
 #vc-spotify-player /* vencord spotify */,
 .container_e131a9 /* vc panel */,
 .panel__5dec7 /* stream panel */ {
-	  padding: 10px;
+    padding: 10px;
 }
 
 /* add rounded corners */
@@ -567,7 +541,7 @@ button.button__201d5 /* small buttons */,
 .container_c48ade > [style$='display: flex;'] {
     margin: 0 0 var(--spacing) var(--spacing);
 }
-/* UNCOMMENT IF YOU REMOVE THE ABOVE SECTION "separate guilds panel background"
+/* UNCOMMENT IF YOU REMOVE THE ABOVE SECTION 'separate guilds panel background'
 .expandedFolderBackground__48112,
 .folder__48112,
 .folderIconWrapper__48112 {
@@ -815,7 +789,7 @@ button.button__67645 /* make user panel buttons round */ {
     background: var(--bg-overlay-app-frame, var(--background-primary));
 }
 
-[class^="discoveryIcon"] {
+[class^='discoveryIcon'] {
     color: var(--text-normal);
     background: var(--background-secondary);
 }
@@ -825,7 +799,7 @@ button.button__67645 /* make user panel buttons round */ {
     background: var(--bg-brand);
 }
 
-[class^="circleIconButton"] {
+[class^='circleIconButton'] {
     background: var(--background-secondary);
 }
 
@@ -834,30 +808,26 @@ button.button__67645 /* make user panel buttons round */ {
     border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
-[aria-label="Mute"] [aria-hidden="true"], [aria-label="Deafen"] [aria-hidden="true"]{
-    opacity: 0.4;
-}
-
-[class^="icon"]:has(path[d^="M16 4h.5v"]) path[d^="M16 4h.5v"] {
+[class^='icon']:has(path[d^='M16 4h.5v']) path[d^='M16 4h.5v'] {
     fill: var(--text-link) !important;
     border: 1px solid rebeccapurple !important;
 }
 
-[class^="icon"]:has(path[d^="M16.5 18H16a1"]) path[d^="M16.5 18H16a1"] {
+[class^='icon']:has(path[d^='M16.5 18H16a1']) path[d^='M16.5 18H16a1'] {
     fill: var(--text-link) !important;
     border: 1px solid rebeccapurple !important;
 }
 
-[class^="linkTop"]:has(path[d^="m19.8 22.6"]) [class^="icon"]:has(path[d^="M16 4h.5v"]) path[d^="M16 4h.5v"] {
+[class^='linkTop']:has(path[d^='m19.8 22.6']) [class^='icon']:has(path[d^='M16 4h.5v']) path[d^='M16 4h.5v'] {
     fill: var(--idle-indicator) !important;
     border: 1px solid rebeccapurple !important;
 }
 
-[class^="linkTop"]:has(path[d^="m19.8 22.6"]) path[d^="m19.8 22.6"] {
+[class^='linkTop']:has(path[d^='m19.8 22.6']) path[d^='m19.8 22.6'] {
     display: none;
 }
 
-[class^="icon"]:has(path[d^="M18.09 1.63c"]) path[d^="M18.09 1.63c"] {
+[class^='icon']:has(path[d^='M18.09 1.63c']) path[d^='M18.09 1.63c'] {
     fill: var(--dnd-indicator) !important;
     border: 1px solid rebeccapurple !important;
 }
@@ -877,7 +847,7 @@ button.button__67645 /* make user panel buttons round */ {
 }
 
 .compact_eda3c8 .headerText_bd68ec > .username__0b0e7::after {
-    content: ":";
+    content: ':';
 }
 
 /* Cozy Mode */
@@ -896,15 +866,10 @@ button.button__67645 /* make user panel buttons round */ {
 }
 
 .cozy_f5c119 .headerText_bd68ec > .username__0b0e7::after {
-    content: ":";
+    content: ':';
 }
 
 /* repairs left shift */
 .cozy_f5c119 .headerText_bd68ec > .username__0b0e7 {
     margin-left: 3px;
-}
-
-*::selection {
-    /* Changes the color when selecting text */
-    background-color: hsl(var(--background-hue) calc(var(--saturation-factor, 1) * 51.4% * calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(52.4% * var(--ui-lightness)), 42.4%) / 1) !important;
 }
