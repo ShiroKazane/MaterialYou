@@ -152,6 +152,10 @@
     background-color: var(--background-secondary) !important;
 }
 
+.expandedFolderIconWrapper__48112:hover > svg[style='color: rgb(88, 101, 242);'] {
+    color: var(--text-normal)
+}
+
 .divider__5126c,
 .mention__3b95d,
 .mentionsBar__7aaec {
