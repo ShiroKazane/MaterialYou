@@ -110,7 +110,7 @@
     --background-mentioned-hover: var(--background-secondary-alt);
 
     /* change the color of popout background */
-    --background-floating: var(--background-tertiary);
+    --background-floating: var(--background-tertiary) !important;
 }
 
 .theme-dark .container__03ec9,
