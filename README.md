@@ -18,7 +18,7 @@ Change Discord's colors to match your preferences.
 
 - Download the latest [Release](https://github.com/ShiroKazane/MaterialYou/releases).
 - Put the file into your **Theme** folder.
-- (other screnario) Upload the file using **Upload Theme** button.
+- (other scenario) Upload the file using **Upload Theme** button.
 
 #### Online Themes
 
