@@ -1,51 +1,49 @@
-<div align=center>
-  <h1>Material You Discord Theme</h1>
-  <p>Change Discord's colors to match your favorite color theme</p>
-</div>
+# MaterialYou
+Change Discord's colors to match your preferences.
+
+![Preview](/../assets/assets/preview.png)
 
 > [!NOTE]
-> This is a combination of [Material You Base Coloring](https://github.com/JustAlittleWolf/Material-You-Discord-Theme) and [Midnight Base UI](https://github.com/refact0r/midnight-discord)
+> This theme combines the vibrant [Material You Base Coloring](https://github.com/JustAlittleWolf/Material-You-Discord-Theme) with the sleek [Midnight Base UI](https://github.com/refact0r/midnight-discord)
 
 ### Installation
 
-#### Openasar
+#### OpenAsar
 
-Copy and paste the contents of [MaterialYouColors.theme.css](https://github.com/ShiroKazane/MaterialYou/blob/main/MaterialYouColors.theme.css) into Theming and restart Discord
+- Copy the contents of [MaterialYouColors.theme.css](https://github.com/ShiroKazane/MaterialYou/blob/main/MaterialYouColors.theme.css).
+- Paste it into **Theming**.
+- Restart Discord to apply the changes.
 
-#### Better Discord
+#### Local Themes
 
-Download the latest [Release](https://github.com/ShiroKazane/MaterialYou/releases) and drop it into your Themes folder
+- Download the latest [Release](https://github.com/ShiroKazane/MaterialYou/releases).
+- Put the file into your **Theme** folder.
+- (other screnario) Upload the file using **Upload Theme** button.
 
-#### Vencord
+#### Online Themes
 
-Copy and paste https://ShiroKazane.github.io/MaterialYou/MaterialYouColors.theme.css
+- Copy `https://ShiroKazane.github.io/MaterialYou/MaterialYouColors.theme.css`
+- Paste it into **Online Themes**.
 
 ### Customization
 
-In the main css file you will find some variables that you can change to match your desired color theme perfectly
+Tailor the theme to your preferences by tweaking the variables in the main CSS file:
 
-* `--background-hue`: specify which color will be used for the background. It is set to 0 by default which is Red. You can find the Hue of your favourite color by going to [htmlcolorcodes](https://htmlcolorcodes.com/color-picker/), selecting your color and copying the value next to "H".
-* `--background-saturation`: change how saturated the background color will be. A lower value will result in a more gray-ish image. If you are using light mode, you probably need to increase this value by a lot.
-* `--background-lightness`: change how bright the background color will be.
-* `--link-lightness`: change how brightly links are displayed. You probably need to lower this value a bit if you are using light mode.
-* `--ui-lightness`: change how bright the Discord logo and some buttons are. With bright colors like yellow reducing this value improves readability in the settings page.
+#### Color Customization
 
-and other thing
+* `--background-hue`: Set the base color for the background. Default is `0` (Red). Use [htmlcolorcodes](https://htmlcolorcodes.com/color-picker/) to find the `H` value of your favorite color.
+* `--background-saturation`: Adjust the saturation of the background. Lower values make it more gray, while higher values make it vibrant. Increase this for light mode.
+* `--background-lightness`: Control the brightness of the background.
+* `--link-lightness`: Adjust the brightness of links. Lower this for better visibility in light mode.
+* `--ui-lightness`: Modify the brightness of the Discord logo and buttons. Reduce this for better readability with bright colors like yellow.
 
-* `--corner-text`: change text at top left corner. It is set to 'nightcord' by default (idk why), so change it to your desire.
-* `--divider-thickness`: change how thick divider between messages. It is set to 3px by default.
-* `--spacing`: change the amount of spacing or padding between ui. It is set to 12px by default.
+#### UI Tweaks
 
-### Preview
+* `--corner-text`: Change the text in the top-left corner. Default is `'nightcord'` (because why not?). Make it your own!
+* `--divider-thickness`: Adjust the thickness of the message dividers. Default is `3px`.
+* `--spacing`: Customize the spacing or padding between UI elements. Default is `12px`.
 
-Change Discord to any color you want
+### Credits
 
-![Dark Mode](assets/images/DarkMode.png)
-
-Everything is themed uniformly
-
-![Settings](assets/images/Settings.png)
-
-Light mode works as well
-
-![Light Mode](assets/images/LightMode.png)
+- Coloring code by [@JustAlittleWolf](https://github.com/JustAlittleWolf/Material-You-Discord-Theme)
+- UI design code by [@refact0r](https://github.com/refact0r/midnight-discord)
