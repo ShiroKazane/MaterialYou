@@ -1,7 +1,7 @@
 # MaterialYou
 Change Discord's colors to match your preferences.
 
-![Preview](/../assets/assets/preview.png)
+![Preview](/assets/preview.png)
 
 > [!NOTE]
 > This theme combines the vibrant [Material You Base Coloring](https://github.com/JustAlittleWolf/Material-You-Discord-Theme) with the sleek [Midnight Base UI](https://github.com/refact0r/midnight-discord)
