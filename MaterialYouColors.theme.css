@@ -2,12 +2,12 @@
  * @name Material You
  * @author ShiroKzn
  * @version 1.1.0
- * @description A Material You Colors implementation with Midnight Base UI.
- * @source https://github.com/ShiroKazane/Material-You-Discord-Theme
+ * @description A Material You Colors Discord Theme implementation with Midnight Base UI.
+ * @source https://github.com/ShiroKazane/MaterialYou
 */
 
 /* Imports */
-@import url('https://ShiroKazane.github.io/Material-You-Discord-Theme/main.theme.css');
+@import url('https://ShiroKazane.github.io/MaterialYou/main.theme.css');
 
 /* Variables */
 :root {
@@ -35,7 +35,7 @@
      * other things
      */
 
-    --corner-text: 'uwu';
+    --corner-text: 'nightcord';
 
     --divider-thickness: 3px;
 
@@ -69,7 +69,7 @@
     /* change to block to show, none to hide */
     --discord-icon: none; /* discord icon */
     --moon-icon: block; /* moon icon */
-    --moon-icon-url: url('https://ShiroKazane.github.io/Material-You-Discord-Theme/assets/moon.svg'); /* custom icon url */
+    --moon-icon-url: url('https://ShiroKazane.github.io/MaterialYou/assets/moon.svg'); /* custom icon url */
     --moon-icon-size: auto;
 
     /* filter uncolorable elements to fit theme */

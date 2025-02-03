@@ -1,23 +1,24 @@
 <div align=center>
-<h1>Material You Discord Theme</h1>
-<p>Change Discord's colors to match your favourite color theme</p>
+  <h1>Material You Discord Theme</h1>
+  <p>Change Discord's colors to match your favorite color theme</p>
 </div>
 
-This is combine of [Material You Base Coloring](https://github.com/JustAlittleWolf/Material-You-Discord-Theme) with [Midnight Base UI](https://github.com/refact0r/midnight-discord)
+> [!NOTE]
+> This is a combination of [Material You Base Coloring](https://github.com/JustAlittleWolf/Material-You-Discord-Theme) and [Midnight Base UI](https://github.com/refact0r/midnight-discord)
 
 ### Installation
 
 #### Openasar
 
-Copy and paste the contents of [MaterialYouColors.theme.css](https://github.com/ShiroKazane/Material-You-Discord-Theme/blob/main/MaterialYouColors.theme.css) into Theming and restart Discord
+Copy and paste the contents of [MaterialYouColors.theme.css](https://github.com/ShiroKazane/MaterialYou/blob/main/MaterialYouColors.theme.css) into Theming and restart Discord
 
 #### Better Discord
 
-Download the latest [Release](https://github.com/ShiroKazane/Material-You-Discord-Theme/releases) and drop it into your Themes folder
+Download the latest [Release](https://github.com/ShiroKazane/MaterialYou/releases) and drop it into your Themes folder
 
 #### Vencord
 
-Copy and paste https://ShiroKazane.github.io/Material-You-Discord-Theme/MaterialYouColors.theme.css
+Copy and paste https://ShiroKazane.github.io/MaterialYou/MaterialYouColors.theme.css
 
 ### Customization
 
@@ -31,7 +32,7 @@ In the main css file you will find some variables that you can change to match y
 
 and other thing
 
-* `--corner-text`: change text at top left corner. It is set to 'uwu' by default, so change it to your desire.
+* `--corner-text`: change text at top left corner. It is set to 'nightcord' by default (idk why), so change it to your desire.
 * `--divider-thickness`: change how thick divider between messages. It is set to 3px by default.
 * `--spacing`: change the amount of spacing or padding between ui. It is set to 12px by default.
 
