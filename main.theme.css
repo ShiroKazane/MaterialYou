@@ -1,57 +1,67 @@
 /**
- * @name Material You
+ * @name Material You (Main)
  * @author ShiroKzn
  * @version 1.1.0
  * @description A Material You Colors Discord Theme implementation with Midnight Base UI.
  * @source https://github.com/ShiroKazane/MaterialYou
 */
 
-/* Variables */
+/**
+ * Core Variables
+ */
 :root {
+    /* Color System */
     --background-hue: 19;
     --background-saturation: 1.0;
     --background-lightness: 1.0;
     --link-lightness: 1.5;
     --ui-lightness: 1.0;
 
-    --corner-text: 'nightcord';
-    --divider-thickness: 3px;
-
+    /* Status Indicators */
     --online-indicator: hsl(92, 28%, 65%);
     --dnd-indicator: hsl(354, 42%, 56%);
     --idle-indicator: hsl(40, 71%, 73%);
     --streaming-indicator: hsl(311, 20%, 63%);
 
+    /* Spacing */
     --spacing: 12px;
+    --divider-thickness: 3px;
 
+    /* Transtitions */
     --list-item-transition: 0.2s ease;
     --unread-bar-transition: 0.2s ease;
     --moon-spin-transition: 0.4s ease;
     --icon-spin-transition: 1s ease;
 
+    /* Border Radius */
     --roundness-xl: 22px;
     --roundness-l: 20px;
     --roundness-m: 16px;
     --roundness-s: 12px;
     --roundness-xs: 10px;
     --roundness-xxs: 8px;
-
     --banner-roundness: 22px 22px 0 0;
 
+    /* DM Icon */
     --discord-icon: none;
     --moon-icon: block;
     --moon-icon-url: url('https://ShiroKazane.github.io/MaterialYou/assets/moon.svg');
     --moon-icon-size: auto;
 
+    /* Filters */
     --login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4);
     --green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43);
     --blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2);
 
+    /* Navigation Bar */
     --windows-nav: none;
     --custom-nav: block;
+    --corner-text: 'nightcord';
 }
 
-/* Reduce motion */
+/**
+ * Reduce Motion
+ */
 :root.reduce-motion {
     --list-item-transition: none;
     --unread-bar-transition: none;
@@ -59,10 +69,13 @@
     --icon-spin-transition: none;
 }
 
-/* Changes all of the main colors of the discord client */
+/**
+ * Color Overrides
+ */
 :root,
 .default-colors,
 .profileColors-3Y0XaR {
+    /* Primary Colors */
     --primary-100-hsl: var(--background-hue) min(calc(var(--saturation-factor, 1) * 5.9% * var(--background-saturation)), 100%) min(calc(96.7% * var(--background-lightness)), 100%) !important;
     --primary-130-hsl: var(--background-hue) min(calc(var(--saturation-factor, 1) * 9.1% * var(--background-saturation)), 100%) min(calc(95.7% * var(--background-lightness)), 100%) !important;
     --primary-160-hsl: var(--background-hue) min(calc(var(--saturation-factor, 1) * 9.7% * var(--background-saturation)), 100%) min(calc(93.9% * var(--background-lightness)), 100%) !important;
@@ -91,8 +104,8 @@
     --primary-860-hsl: var(--background-hue) min(calc(var(--saturation-factor, 1) * 7.7% * var(--background-saturation)), 100%) min(calc(2.5% * var(--background-lightness)), 100%) !important;
 
     /*
-     * Changes the color of the discord logo and some buttons
-     * DELETE THIS if you want to keep the discord-blue logo
+     * Brand Colors
+     * DELETE THIS if you want to keep the discord-blue icon
      */
     --brand-260-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 86.2%*calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(88.6% * var(--ui-lightness)), 98.6%) !important;
     --brand-360-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 86.1%*calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(77.5% * var(--ui-lightness)), 87.5%) !important;
@@ -100,40 +113,45 @@
     --brand-560-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 51.4%*calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(52.4% * var(--ui-lightness)), 42.4%) !important;
     --brand-600-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 46.7%*calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(44.1% * var(--ui-lightness)), 34.1%) !important;
 
-    /* changes the color of clickable links */
+    /* Link Colors */
     --blue-330-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--link-lightness) + 0.5))) min(calc(59% * var(--link-lightness)), 99%) !important;
     --blue-345-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--link-lightness) + 0.5))) min(calc(49.4% * var(--link-lightness)), 89.4%) !important;
     --blue-430-hsl: var(--background-hue) calc(var(--saturation-factor, 1) * 100% * calc(1 / calc(var(--link-lightness) + 0.5))) min(calc(45.3% * var(--link-lightness)), 85.3%) !important;
 
-    /* change the color of mentioned message background */
+    /* Mentioned Message Background Colors */
     --background-mentioned: var(--background-message-highlight);
     --background-mentioned-hover: var(--background-message-highlight-hover);
 }
 
-.theme-dark .container__03ec9,
-.theme-dark .header__71942,
-.theme-dark .scrollerContainer_dda72c,
-.theme-dark .emptyPage_feb902 {
-    background-color: var(--background-primary) !important;
+/**
+ * Base Styles
+ */
+ *::selection {
+     background-color: hsl(var(--background-hue) calc(var(--saturation-factor, 1) * 51.4% * calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(52.4% * var(--ui-lightness)), 42.4%) / 1) !important;
+ }
+
+.theme-dark {
+    .container__03ec9, .header__71942,
+    .scrollerContainer_dda72c, .emptyPage_feb902 {
+        background-color: var(--background-primary) !important;
+    }
+
+    .container__6b2e5 {
+        background-color: var(--background-secondary-alt) !important;
+    }
 }
 
-.theme-dark .container__6b2e5 {
-    background-color: var(--background-secondary-alt) !important;
-}
-
-*::selection {
-    /* Changes the color when selecting text */
-    background-color: hsl(var(--background-hue) calc(var(--saturation-factor, 1) * 51.4% * calc(1 / calc(var(--ui-lightness) + 0.5))) min(calc(52.4% * var(--ui-lightness)), 42.4%) / 1) !important;
-}
-
-.chat_f75fb0 /* chat + member list */,
-.sidebar_c48ade /* channel sidebar */,
-.privateChannels__35e86 .scroller__99e7c /* dms list inner */,
-#app-mount .innerHeader__0b563:after /* channels and roles header shadow */,
-.stackedBars__74017 /* reply bar underneath */ {
+/**
+ * Layout Components
+ */
+.chat_f75fb0, .sidebar_c48ade,
+.privateChannels__35e86 .scroller__99e7c,
+#app-mount .innerHeader__0b563:after,
+.stackedBars__74017 {
     background: none;
 }
-.contentContainer_a56260 /* quests page fix */ {
+
+.contentContainer_a56260 {
     background: none !important;
 }
 
@@ -346,7 +364,7 @@ a[href='https://support.discord.com'] {
 /* discover page sidebar & wrappers */
 .sidebarContainer_a3a4ce,
 .pageWrapper_a3a4ce,
-.thin_d125d2.scrollerBase_d125d2:not(.sidebarRegionScroller__23e6b),
+.thin_d125d2.scrollerBase_d125d2:not(.sidebarRegionScroller__23e6b, .topicsScroller__0f481),
 .layerContainer_da8173 .outer_c0bea0 /* profile popout */ {
     border-radius: var(--roundness-xl);
     overflow: hidden;

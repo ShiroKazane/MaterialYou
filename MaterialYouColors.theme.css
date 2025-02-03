@@ -6,10 +6,14 @@
  * @source https://github.com/ShiroKazane/MaterialYou
 */
 
-/* Imports */
+/**
+ * Imports
+ */
 @import url('https://ShiroKazane.github.io/MaterialYou/main.theme.css');
 
-/* Variables */
+/**
+ * Core Variables
+ */
 :root {
     /*
      * Select which hue of color you want Discord to be themed in.
@@ -35,18 +39,15 @@
      * other things
      */
 
-    --corner-text: 'nightcord';
-
-    --divider-thickness: 3px;
-
     /* color of status indicators and window controls */
     --online-indicator: hsl(92, 28%, 65%); /* change to #23a55a for default green */
     --dnd-indicator: hsl(354, 42%, 56%); /* change to #f23f43 for default red */
     --idle-indicator: hsl(40, 71%, 73%); /* change to #f0b232 for default yellow */
     --streaming-indicator: hsl(311, 20%, 63%); /* change to #593695 for default purple */
 
-      /* amount of spacing and padding */
+    /* amount of spacing and padding */
     --spacing: 12px;
+    --divider-thickness: 3px;
 
     /* animations */
     /* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
@@ -62,7 +63,6 @@
     --roundness-s: 12px; /* members, settings inputs */
     --roundness-xs: 10px; /* channels, buttons */
     --roundness-xxs: 8px; /* searchbar, small elements */
-
     --banner-roundness: 22px 22px 0 0; /* server banner corner, 0 for bottom */
 
     /* direct messages moon icon */
@@ -82,4 +82,5 @@
     /* block to show, none to hide; choose only one to show!*/
     --windows-nav: none; /* default windows-style buttons */
     --custom-nav: block; /* custom mac-style buttons */
+    --corner-text: 'nightcord'; /* top-left corner text */
 }
