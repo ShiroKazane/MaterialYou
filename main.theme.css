@@ -131,12 +131,12 @@
  }
 
 .theme-dark {
-    .container__03ec9, .header__71942,
-    .scrollerContainer_dda72c, .emptyPage_feb902 {
+    .container__0b563, .header__0b563,
+    .scrollerContainer_c6b11b, .emptyPage__5d7c9 {
         background-color: var(--background-primary) !important;
     }
 
-    .container__6b2e5 {
+    .container_c2efea {
         background-color: var(--background-secondary-alt) !important;
     }
 }
@@ -861,7 +861,7 @@ button.button__67645 /* make user panel buttons round */ {
 }
 
 /* Compact Mode */
-.compact_eda3c8 .headerText_bd68ec > .username__0b0e7::before {
+.compact_c19a55 .headerText_c19a55 > .username_c19a55::before {
     content: '';
     width: calc(100% + 6px);
     height: 100%;
@@ -874,12 +874,12 @@ button.button__67645 /* make user panel buttons round */ {
     z-index: -1;
 }
 
-.compact_eda3c8 .headerText_bd68ec > .username__0b0e7::after {
+.compact_c19a55 .headerText_c19a55 > .username_c19a55::after {
     content: ':';
 }
 
 /* Cozy Mode */
-.cozy_f5c119 .headerText_bd68ec > .username__0b0e7::before {
+.cozy_c19a55 .headerText_c19a55 > .username_c19a55::before {
     content: '';
     width: calc(100% + 7px);
     height: 100%;
@@ -893,12 +893,12 @@ button.button__67645 /* make user panel buttons round */ {
     left: -3px;
 }
 
-.cozy_f5c119 .headerText_bd68ec > .username__0b0e7::after {
+.cozy_c19a55 .headerText_c19a55 > .username_c19a55::after {
     content: ':';
 }
 
 /* repairs left shift */
-.cozy_f5c119 .headerText_bd68ec > .username__0b0e7 {
+.cozy_c19a55 .headerText_c19a55 > .username_c19a55 {
     margin-left: 3px;
 }
 
